@@ -1,0 +1,19 @@
+h1 {
+color:blue; text-decoration: underline;
+}
+body {
+    background-color: yellow;
+    background-image: url("../img/pupsmall.jpeg");
+    font-style: italic;
+}
+ul {
+    list-style: square;
+}
+
+table, tr, td {
+    padding: 25px;
+    font-size: 25px;
+}
+a:hover {
+text-decoration: wavy red underline;
+}
