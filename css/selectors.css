@@ -2,13 +2,13 @@
 #container {
     margin: 50px auto;
     width: 500px;
-    padding: 10px;
+    padding: 10px
 }
 
 /*  selector for all "h1" elements
     that are a descendent of id="container"
     and have a class of "fancy-header" */
-h1.fancy-header {
+#container h1.fancy-header{
     color: blue;
     text-decoration: underline;
 }
@@ -25,6 +25,6 @@ em {
 
 /*  selector for all "anchor" elements
     that are a direct child of an element with class="article" */
-.container>a {
+.article>a {
     float:right;
 }

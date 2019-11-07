@@ -1,16 +1,25 @@
+p {
+    color: red;
+}
 h1 {
 color:blue; text-decoration: underline;
 }
 body {
     background-color: yellow;
-    background-image: url("../img/pupsmall.jpeg");
+    background-image:url("../img/IMG_1213.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
     font-style: italic;
 }
 ul {
     list-style: square;
 }
+li {
+    color:red;
+}
 
 table, tr, td {
+    color:red;
     padding: 25px;
     font-size: 25px;
 }
