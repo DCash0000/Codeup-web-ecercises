@@ -1,0 +1,42 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+.info {
+    margin: 5px;
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px lightgrey solid;
+    color: blue;
+    border-radius: 10px;
+
+}
+.success {
+    margin: 5px;
+    background-color: lightgreen;
+    padding: 10px;
+    border: 1px lightgrey solid;
+    color: green;
+    border-radius: 10px;
+
+}
+.earning {
+    margin: 5px;
+    background-color: lightyellow;
+    padding: 10px;
+    border: 1px lightgrey solid;
+    color: gold;
+    border-radius: 10px;
+}
+.error {
+    margin: 5px;
+    background-color: lightpink;
+    padding: 10px;
+    border: 1px lightgrey solid;
+    color: red;
+    border-radius: 10px;
+
+}

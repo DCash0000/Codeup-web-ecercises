@@ -1,7 +1,7 @@
 p {
     color: red;
 }
-h1 {
+h1, h2, h3, h4, h5, h6 {
 color:blue; text-decoration: underline;
 }
 body {
@@ -17,12 +17,29 @@ ul {
 li {
     color:red;
 }
+table {
+    background-image: url("../img/pupsmall.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 table, tr, td {
-    color:red;
-    padding: 25px;
-    font-size: 25px;
+    color: red;
+    padding: 15px;
+    font-size: 15px;
 }
 a:hover {
 text-decoration: wavy red underline;
+}
+a:link {
+    color: blue;
+}
+a:visited {
+    color: purple;
+}
+a:active {
+    color: orange;
+}
+em {
+    color: white;
 }
