@@ -1,0 +1,12 @@
+body {
+    background-image: url("../IMG/IMG_1213.JPG");
+    background-size: 430px 350px;
+}
+h1 {
+    color: navy;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+h2 {
+    color: yellow;
+}
