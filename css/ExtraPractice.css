@@ -1,32 +1,33 @@
-body {
-    background-image: url("../IMG/IMG_1213.JPG");
-    /*background-size: 430px 350px;*/
-    /*background-size: auto;*/
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-img {
-    opacity: 0.5%;
-    filter: alpha(opacity=50);
-}
-h1 {
-    color: navy;
-    text-decoration: underline;
-    font-weight: bolder;
-}
-h2 {
-    color: navy;
-}
-table {
-    background-color: #cbffcd;
-}
-th {
-    text-decoration: underline;
-    text-shadow: 2px 2px white;
-    color: red;
-}
-td{
-    font-style: italic;
-}
+/*body {*/
+/*    background-image: url("../IMG/IMG_1213.JPG");*/
+/*    !*background-size: 430px 350px;*!*/
+/*    !*background-size: auto;*!*/
+/*    display: block;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    width: 50%;*/
+
+/*}*/
+/*img {*/
+/*    opacity: 0.5%;*/
+/*    filter: alpha(opacity=50);*/
+/*}*/
+/*h1 {*/
+/*    color: navy;*/
+/*    text-decoration: underline;*/
+/*    font-weight: bolder;*/
+/*}*/
+/*h2 {*/
+/*    color: navy;*/
+/*}*/
+/*table {*/
+/*    background-color: #cbffcd;*/
+/*}*/
+/*th {*/
+/*    text-decoration: underline;*/
+/*    text-shadow: 2px 2px white;*/
+/*    color: red;*/
+/*}*/
+/*td{*/
+/*    font-style: italic;*/
+/*}*/
