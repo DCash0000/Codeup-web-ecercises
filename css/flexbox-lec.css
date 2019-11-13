@@ -15,6 +15,9 @@ body {
     width: 100%;
     border: 3px solid goldenrod;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 20em;
 }
 .flex-item {
     background: #BFD45D;
