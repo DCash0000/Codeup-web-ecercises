@@ -67,10 +67,18 @@ a {
 
 .container {
     /* This is a flex container */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .card {
-    /* This is a flex item */
+     /*This is a flex item*/
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    flex-basis: 100%;
 }
 
 /*test commit*/

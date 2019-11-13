@@ -67,4 +67,5 @@ body {
 }
 .destination {
     /* bigger item */
+    flex-basis: 30%;
 }
