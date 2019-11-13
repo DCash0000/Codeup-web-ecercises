@@ -16,6 +16,8 @@ body {
     border: 3px solid goldenrod;
     display: flex;
     flex-direction: row;
+    height: 10em;
+
 
 
 }
@@ -25,12 +27,20 @@ body {
     padding: 1em;
 }
 
-/*.first-item {*/
-/*    font-size: 15px;*/
-/*}*/
-/*.second-item {*/
-/*    font-size: 30px;*/
-/*}*/
-/*.third-item {*/
-/*    font-size: 45px;*/
-/*}*/
+.first-item {
+    font-size: 15px;
+    /*order: 2;*/
+    /*align-self: flex-start;*/
+    /*flex-grow: 0;*/
+}
+.second-item {
+    font-size: 15px;
+    /*order: 1;*/
+    /*align-self: center;*/
+    /*flex-grow: 1;*/
+}
+.third-item {
+    font-size: 15px;
+    /*align-self: flex-end;*/
+    /*flex-grow: 2;*/
+}
