@@ -1,0 +1,56 @@
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(8, 10em);
+    grid-template-rows: repeat(8, 10em);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 3 / 3;
+    background-color: blue;
+    border: 20px solid black;
+}
+.div2 {
+    grid-area: 1 / 3 / 3 / 9;
+    background-color: red;
+    border: 20px solid black;
+}
+.div3 {
+    grid-area: 3 / 1 / 6 / 3;
+    background-color: yellow;
+    border: 20px solid black;
+}
+.div4 {
+    grid-area: 3 / 5 / 5 / 9;
+    background-color: white;
+    border: 20px solid black;
+}
+.div5 {
+    grid-area: 6 / 1 / 8 / 3;
+    background-color: white;
+    border: 20px solid black;
+}
+.div6 {
+    grid-area: 8 / 1 / 9 / 3;
+    background-color: red;
+    border: 20px solid black;
+}
+.div7 {
+    grid-area: 3 / 3 / 8 / 5;
+    background-color: white;
+    border: 20px solid black;
+}
+.div8 {
+    grid-area: 5 / 5 / 8 / 9;
+    background-color: yellow;
+    border: 20px solid black;
+}
+.div9 {
+    grid-area: 8 / 3 / 9 / 9;
+    background-color: blue;
+    border: 20px solid black;
+}
