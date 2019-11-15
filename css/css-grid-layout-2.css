@@ -1,0 +1,29 @@
+.container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin: auto;
+    height: 100vh;
+}
+.header {
+    background-color: limegreen;
+    grid-area: 1 / 1 / 2 / 7;
+
+}
+.nav {
+    background-color: limegreen;
+    grid-area: 2 / 1 / 6 / 2;
+}
+.article {
+    background-color: limegreen;
+    grid-area: 2 / 2 / 5 / 7;
+}
+.ads {
+    background-color: limegreen;
+    grid-area: 5 / 2 / 6 / 7;
+}
+.footer {
+    background-color: limegreen;
+    grid-area: 6 / 1 / 7 / 7;
+}
