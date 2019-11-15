@@ -14,7 +14,7 @@ body {
     /* TODO: make the wrapper a grid container */
     display: grid;
     /* TODO: define five columns where the middle three columns are 400px and the outer columns fill the remaining space */
-    grid-template-columns: 20% 400px 400px 400px 20%;
+    grid-template-columns: auto 400px 400px 400px auto;
     /* TODO: add a gap of 1em around all grid items */
     grid-gap: 1em;
     /* no row properties are needed */
@@ -48,12 +48,15 @@ main {
     display: grid;
     /* TODO: define main to contain three columns that together take up equally the full width of main and have a 1em gap between grid items */
     grid-template-columns: 33% 33% 33%;
+    column-gap: 1em;
+    overflow: auto;
 }
 
 header ul {
     /* TODO: use flex box to horizontally line up all list items */
     display: flex;
     justify-content: space-evenly;
+
 
 }
 
@@ -78,6 +81,7 @@ header a:hover {
     /* TODO: define the grid area of this element to take up the entire first row of the .container grid  */
     display: grid;
     grid-area: 1 / 1 / 1 /6 ;
+
 
 }
 
@@ -123,6 +127,8 @@ nav a:hover {
     border-radius: 10px;
     position: relative;
     /* TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
+    /*transition-delay: .2s;*/
+    transition: .2s;
 }
 
 .card:hover {
