@@ -1,33 +1,62 @@
-/*body {*/
-/*    background-image: url("../IMG/IMG_1213.JPG");*/
-/*    !*background-size: 430px 350px;*!*/
-/*    !*background-size: auto;*!*/
-/*    display: block;*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*    width: 50%;*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    text-align: center;
+}
+main {
+    /* add margin to make the top of our grid more visible */
+    margin-top: 2em;
+    background: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /*grid-template-areas:*/
+    /*        "one one . . ."*/
+    /*        "one one . two ."*/
+    /*        ". three three . ."*/
+;
+    grid-gap: 20px;
+}
+main div {
+    font-size: 2em;
+    color: white;
+    background: grey;
+    border: 1px solid black; /* thin out border to 1px */
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+.example-item{
+    background: lightgreen;
+    opacity: .7;
+}
+/*
+    These classes are just a way to explicitly place the grey tiles
+    so that other items may be overlaid.
+*/
+.one {
+    background-color: purple;
+    grid-area: 1 / 1 / 3 / 6;
+}
+.two {
+    background-color: yellow;
+    grid-area: 3 / 1 / 6 / 2
+}
+.heading {
+    background-color: blue;
+    grid-area: 3 / 2 / 3 / 4;
+}
+.four {
+    grid-area: 3 / 4 / 7 / 5;
 
-/*}*/
-/*img {*/
-/*    opacity: 0.5%;*/
-/*    filter: alpha(opacity=50);*/
-/*}*/
-/*h1 {*/
-/*    color: navy;*/
-/*    text-decoration: underline;*/
-/*    font-weight: bolder;*/
-/*}*/
-/*h2 {*/
-/*    color: navy;*/
-/*}*/
-/*table {*/
-/*    background-color: #cbffcd;*/
-/*}*/
-/*th {*/
-/*    text-decoration: underline;*/
-/*    text-shadow: 2px 2px white;*/
-/*    color: red;*/
-/*}*/
-/*td{*/
-/*    font-style: italic;*/
-/*}*/
+}
+/*.five {display: none;}*/
+.six {
+    grid-area: 4 / 2 / 5 / 4;
+}
+/*.seven {display: none;}*/
+/*.eight {display: none;}*/
+/*.nine {display: none;}*/
+/*.ten {display: none;}*/
