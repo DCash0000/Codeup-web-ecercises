@@ -23,17 +23,20 @@ main {
 /*grid-gap: 1px;*/
 
 .top-nav {
-grid-area: top-nav;
+    justify-content: flex-start;
+    background-color: black;
+    text-decoration-color: white;
+    grid-area: top-nav;
 }
 .side-nav {
-grid-area: side-nav;
+    grid-area: side-nav;
 }
-.body-item-1 {
-grid-area: body-item-1
+.body-heading-1 {
+    grid-area: body-heading-1
 }
-.body-item-2 {
-grid-area: body-item-2;
+.body-heading-2 {
+    grid-area: body-heading-2;
 }
 .body-heading-3 {
-grid-area: body-heading-3;
+    grid-area: body-heading-3;
 }
