@@ -42,14 +42,22 @@
         var arrayLength = function (inputArray) {
             return inputArray.length
         }
-        console.log(arrayLength(["dog", "cat", "mouse", "fish"]))
+        console.log(arrayLength(["dog", "cat", "mouse", "fish"]));
         console.log(arrayLength(["apple", "mango", "grapes", "pineapple", "kiwi", "coconut", "dragonfruit"]));
 
- // write a js fucntion called lastItem that returns the last item of an array
+ // write a js function called lastItem that takes in an array and returns the last item
         function lastItem(inputArray) {
             return inputArray[inputArray.length-1]
         }
         console.log(lastItem(["dog", "cat", "bird", "mouse", "fish"]));
+
+        // write a js fucntion called nthItem that takes in an array and a number and returns the nth item from the array
+
+        function nthItem(inputArray, n) {
+            return inputArray[n-1]
+        }
+        console.log(nthItem(["Dog", "Cat", "Bird", "Mouse"], 5));
+        console.log(nthItem(["Dog", "Cat", "Bird", "Mouse"], 2));
     </script>
     </body>
 </html>
