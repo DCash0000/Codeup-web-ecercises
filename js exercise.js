@@ -115,6 +115,14 @@ console.log(userNameNotAParagraph);
 var noWhiteSpace = username.trim() === username && password.trim() === password;
 console.log(noWhiteSpace);
 
+function getVowels(str){
+    var vowelsCount = 0;
+    var string =  str.toString();
+    for (var i = 0; i <= string.length -1; i++){
+        if (string.charAt(i) == "a" || string.charAt(i) == "e")
+    }
+}
+
 
 
 
