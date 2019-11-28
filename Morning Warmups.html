@@ -51,7 +51,7 @@
         }
         console.log(lastItem(["dog", "cat", "bird", "mouse", "fish"]));
 
-        // write a js fucntion called nthItem that takes in an array and a number and returns the nth item from the array
+        // write a js function called nthItem that takes in an array and a number and returns the nth item from the array
 
         function nthItem(inputArray, n) {
             return inputArray[n-1]
@@ -127,6 +127,14 @@
             return vowels === null ? 0 : vowels.length;
         }
         console.log(getVowels("Hey, how have you been? I've been great!, After Graduating from Codeup, I joined a Junior Dev team, YaY me!!!"));
+
+
+        // Write JS Function called getLetter that accepts a string and returns that letter
+        function getLetter(str){
+            var letter = str.match(/[b]/gi);
+            return letter == null ? 0 :letter.length;
+        }
+        console.log(getLetter("Buy a bucket of those Bee's, buy buy buy a Bucket of those bee's!"));
     </script>
     </body>
 </html>
