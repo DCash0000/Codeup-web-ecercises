@@ -123,16 +123,10 @@
 
         // write JS function called getVowels that accepts a string and returns the vowels
         function getVowels(str) {
-            var vowelsCount = 0;
-            var string = str.toString();
-            for (var i = 0; i <= string.length - 1; i++) {
-                if (str.charAt(i) == "a" || str.charAt(i) == "e" || str.charAt(i) == "i" || str.charAt(i) == "0" || str.charAt(i) == "u" || str.charAt(i) == "y" || {
-                    vowelsCount += 1;
-                }
-            }
-            return vowelsCount;
+            var vowels = str.match(/[aeiouy]/gi);
+            return vowels === null ? 0 : vowels.length;
         }
-        console.log(getVowels("Hey how are you doing? Ohh! that's great, me... well ever since I graduated from Codeup, I've joined a junior web dev team!!! YaY for me!"));
+        console.log(getVowels("Hey, how have you been? I've been great!, After Graduating from Codeup, I joined a Junior Dev team, YaY me!!!"));
     </script>
     </body>
 </html>
