@@ -135,6 +135,15 @@
             return letter == null ? 0 :letter.length;
         }
         console.log(getLetter("Buy a bucket of those Bee's, buy buy buy a Bucket of those bee's!"));
+
+
+        // Write a JS function called getNumber that accepts a string and extracts only the numbers from that string
+        function getNumber(str){
+            var num = str.replace(/\D/g,"");
+            return parseInt(num, 10);
+        }
+
+        console.log(getNumber("ABC3fgh8ijkl11"));
     </script>
     </body>
 </html>
