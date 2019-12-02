@@ -1,3 +1,5 @@
+"use strict";
+
 console.log("Hello World");
 
 let name = "Cash";
@@ -25,4 +27,8 @@ let person = {
   name : "Cash",
   age : 26
 };
-console.log(person);
+//dot notation
+person.name = "Dalvin";
+
+//bracket notation
+console.log(person.name);
