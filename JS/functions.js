@@ -9,11 +9,11 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-    console.log("Say Hello Function");
-  return "Hello, " + name;
+    // console.log("Say Hello Function");
+  return "Hello, " + name + "!";
 }
 
-console.log(sayHello("Cash!"));
+
 
 
 /**
@@ -23,7 +23,8 @@ console.log(sayHello("Cash!"));
  *
  * console.log 'helloMessage' to check your work
  */
-
+var helloMessage = sayHello("Cash");
+console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
