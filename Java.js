@@ -10,3 +10,19 @@ console.log(name);
 
 const interestRate = 0.3;
 console.log(interestRate);
+
+
+let age = 26;
+let isApproved = true;
+let firstName = undefined;
+let selectedColor = null;
+
+
+// Reference Types (Object, Array, Function)
+
+//person object
+let person = {
+  name : "Cash",
+  age : 26
+};
+console.log(person);
