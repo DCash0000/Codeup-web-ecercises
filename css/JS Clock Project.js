@@ -14,5 +14,9 @@ var showCurrentTime = function(){
    if(minutes < 10){
        minutes = "0" + minutes;
    }
-   if (seconds = "0" + seconds);
-}
+   if (seconds = "0" + seconds);{
+       seconds = "0" + seconds;
+    }
+    var clockTime = hours + ':' + minutes + ':' + seconds + "" + meridian + "!";
+    clock.innerText =  clockTime;
+};
