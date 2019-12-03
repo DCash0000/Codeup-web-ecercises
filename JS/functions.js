@@ -9,7 +9,6 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-    // console.log("Say Hello Function");
   return "Hello, " + name + "!";
 }
 
@@ -31,7 +30,7 @@ console.log(helloMessage);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-var myName = ("Cash");
+var myName = "Cash";
 console.log(sayHello(myName));
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -55,7 +54,6 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 function isTwo(number) {
-    // if (number === 2) {
         return number === 2;
 
     }
@@ -105,7 +103,6 @@ function applyDiscount(price, discount){
 }
 var amountDiscounted = Number(prompt("What discount will be applied?"));
 var oldPrice = Number(prompt("What was your original price?"));
-alert("Your discount is. " + applyDiscount(oldPrice, amountDiscounted));
+alert("Your discount is total is: " + applyDiscount(oldPrice, amountDiscounted));
 
 
-var
