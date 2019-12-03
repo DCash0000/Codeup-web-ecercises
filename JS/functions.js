@@ -60,7 +60,6 @@ function isTwo(number) {
     }
     console.log(isTwo);
 }
-
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
