@@ -72,10 +72,12 @@ function isTwo(number) {
  * > calculateTip(0.25, 25.50) // returns 6.37
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-function calculateTip(x, y){
-    var tip = ;
-    var bill = ;
+function calculateTip(){
+    var bill = Number(document.getElementById("bill").value);
+    var tip = bill * .10;
+    var totalBill = (bill + tip);
 }
+console.log(totalBill);
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
