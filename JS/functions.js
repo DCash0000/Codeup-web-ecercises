@@ -106,3 +106,6 @@ function applyDiscount(price, discount){
 var amountDiscounted = Number(prompt("What discount will be applied?"));
 var oldPrice = Number(prompt("What was your original price?"));
 alert("Your discount is. " + applyDiscount(oldPrice, amountDiscounted));
+
+
+var
