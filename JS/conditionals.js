@@ -15,13 +15,23 @@
  *
  * Can you refactor your code to use functions?
  */
-var userInput = confirm("Would you like to enter a number?");
-prompt("Input number...");
-if(userInput % 2) {
-    alert("Number is odd");
-}else if(userInput + 100){
-    alert("userInput + 100");
-}
+
+// var confirmation = confirm("Would you like to choose a number?");
+ // if(confirmation === true){
+ //     var userInput = Number(prompt("Your number is..."));
+ //     if (!isNaN(userInput)){
+ //        var evenOdd = (userInput % 2 === 0) ? "even" : "odd";
+ //        var negPos = (userInput >= 0) ? "positive" : "negative";
+ //        alert("Number is " + evenOdd + ".");
+ //        alert("Number is " + negPos + ".");
+ //        alert("Number is " + (userInput + 100));
+ //     }else{
+ //         alert("Is not a number")
+ //     }
+ //
+ //
+ // }
+
 
 /* ########################################################################## */
 
@@ -50,16 +60,30 @@ if(userInput % 2) {
 //                  will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+function analyzeColor(color){
+    if(color === "blue"){
+        return("Blue is the color of the sky!");
+    }else if(color === "red"){
+        return("Strawberries are red!");
+    }else if(color === "cyan"){
+        return("I dont't know anything abut cyan!");
+    }else{
+        return("Enter valid color!");
+    }
+}
+console.log(analyzeColor("red"));
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+console.log(analyzeColor(randomColor));
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+
 
 /**
  * TODO:
