@@ -81,7 +81,7 @@ return (tip * bill);
  */
 var tipAmount = parseFloat(prompt("What percentage would you like to tip?"));
 var billAmount = parseFloat((prompt("How much was your bill?")));
-alert("Your total is. " + calculateTip(tipAmount, billAmount) + ".");
+alert("Your total is: " + calculateTip(tipAmount, billAmount) + ".");
 
 /**
  *

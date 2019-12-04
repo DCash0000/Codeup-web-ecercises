@@ -42,68 +42,78 @@
 
 
 //Swapping variables
-let a = "red";
-let b = "blue";
-let c = a;
-a = b;
-b = c;
-console.log(a);
-console.log(b);
+// let a = "red";
+// let b = "blue";
+// let c = a;
+// a = b;
+// b = c;
+// console.log(a);
+// console.log(b);
 
 //hour
 //if hour is between 6 am and 12 pm: good morning!
 //if it is between 12pm and 6pm: good afternoon!
 //otherwise: good evening!
-let hour = 10;
-
-if(hour >= 6 && hour < 12){
-    console.log("Good Morning");
-}else if(hour >= 12 && hour < 18){
-    console.log("Good Afternoon!");
-}else {
-    console.log("Good Evening!");
-}
+// let hour = 10;
+//
+// if(hour >= 6 && hour < 12){
+//     console.log("Good Morning");
+// }else if(hour >= 12 && hour < 18){
+//     console.log("Good Afternoon!");
+// }else {
+//     console.log("Good Evening!");
+// }
 
 
 //switch...case
-let role = "moderator";
-
-switch(role){
-    case 'guest':
-        console.log("Guest User");
-        break;
-
-    case'moderator':
-        console.log("Moderator User");
-        break;
-    default:
-        console.log("Unknown User");
-
-}
+// let role = "moderator";
+//
+// switch(role){
+//     case 'guest':
+//         console.log("Guest User");
+//         break;
+//
+//     case'moderator':
+//         console.log("Moderator User");
+//         break;
+//     default:
+//         console.log("Unknown User");
+//
+// }
 
 //if else version (cleaner code)
-if(role === "guest"){
-    console.log("guest");
-}else if(role === "moderator"){
-    console.log("Moderator");
-}else{
-    console.log("Unknown User");
-}
+// if(role === "guest"){
+//     console.log("guest");
+// }else if(role === "moderator"){
+//     console.log("Moderator");
+// }else{
+//     console.log("Unknown User");
+// }
 
 
 //for loop
 //i = index
-for(let i = 0; i < 5; i++){
-    if( i % 2 !==0)//<---how to get odd numbers
-        console.log(i);
-    console.log("Hello World!");
-}
+// for(let i = 0; i < 5; i++){
+//     if( i % 2 !==0)//<---how to get odd numbers
+//         console.log(i);
+//     console.log("Hello World!");
+// }
 
 
 
 //while loop
+// let i = 0;
+// while(i <= 5){
+//     if(i % 2 !==0) console.log(i);
+//     i++;
+// }
+
+
+
+//do while loop
+
 let i = 0;
-while(i <= 5){
+do{
     if(i % 2 !==0) console.log(i);
     i++;
-}
+}while(i <= 5);

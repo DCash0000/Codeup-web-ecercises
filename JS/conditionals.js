@@ -17,6 +17,11 @@
  */
 var userInput = confirm("Would you like to enter a number?");
 prompt("Input number...");
+if(userInput % 2) {
+    alert("Number is odd");
+}else if(userInput + 100){
+    alert("userInput + 100");
+}
 
 /* ########################################################################## */
 
@@ -37,7 +42,7 @@ prompt("Input number...");
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-function analyzeColor = ("color")
+// function analyzeColor = ("color")
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
