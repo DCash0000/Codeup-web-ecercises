@@ -232,20 +232,20 @@ console.log("hello from conditionals lec.js!");
 
 
 //TODO: Write a function that accepts a string that is a traffic light color as an input. When this function is called, it should return a message informing the user what to do when approaching that color light at an intersection.
-
-function trafficLight(trafficLight) {
-    if (trafficLight === "green") {
-        return "Go!";
-    } else if (trafficLight === "red") {
-        return "Stop!";
-    } else if (trafficLight === "yellow") {
-        return "Slow Down!";
-    }else {
-        return "Proceed with Caution";
-    }
-}
-
-console.log(trafficLight("yellow"));
+//
+// function trafficLight(trafficLight) {
+//     if (trafficLight === "green") {
+//         return "Go!";
+//     } else if (trafficLight === "red") {
+//         return "Stop!";
+//     } else if (trafficLight === "yellow") {
+//         return "Slow Down!";
+//     }else {
+//         return "Proceed with Caution";
+//     }
+// }
+//
+// console.log(trafficLight("yellow"));
 
 
 // ================ NESTED STATEMENTS ===============
@@ -285,18 +285,18 @@ console.log(trafficLight("yellow"));
 //     message = "Oops, something went wrong.";
 // }
 // console.log(message);
-
-
-// var success = true;
-// var message = (success) ? "Operation was successful from tern." : "Oops, something went wrong from tern.";
-// console.log(message)
+//
+//
+//  success = true;
+//  message = (success) ? "Operation was successful from tern." : "Oops, something went wrong from tern.";
+// console.log(message);
 
 
 //TODO: Refactor the following conditional as a ternary
 
 // var weather = "sunny";
 // var weatherMessage;
-
+//
 // if(weather === "rainy"){
 //    weatherMessage = "It's raining!";
 // } else {
@@ -305,6 +305,9 @@ console.log(trafficLight("yellow"));
 
 //WRITE YOUR TERNARY STATEMENT HERE!
 
+// var weather = "sunny";
+// var weatherMessage = (weather === "rainy") ? "It's raining!" : "Have a nice day!";
+// console.log(weatherMessage);
 
 
 // =============== SWITCH STATEMENT ================
@@ -319,27 +322,123 @@ console.log(trafficLight("yellow"));
 //     case "cheese":
 //         alert("Just plain cheese? Okay...");
 //         break;
+//     case "ham":
+//         alert("Ham is nice and easy to spell.");
 //     default:
 //         alert(pizzaPreference + " isn't my favorite, but let's order some!");
 //         break;
 // }
-
+//
+// var pizzaPreference = prompt("What kind of pizza do you like?");
+// console.log("User pizza input: " + pizzaPreference);
+//
+// if (pizzaPreference === "pineapple and hot sauce") {
+//     alert("What a coincidence, that's my favorite!");
+// } else if (pizzaPreference === "cheese") {
+//     alert("Just plain cheese? Okay...");
+// }  else if (pizzaPreference === "ham"){
+//     alert("Ham is easy to spell and awesome!");
+// } else {
+//     alert(pizzaPreference + " isn't my favorite, but let's order some!");
+// }
 
 //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
+
+// var weather = "sunny";
+// switch(weather){
+//     case"rainy":
+//         alert("It's raining!");
+//         break;
+//     case"sunny":
+//         alert("It's sunny!");
+//         break;
+//     case"snowing":
+//         alert("It's snowing!");
+//         break;
+//     default:
+//         alert("Have a nice day!");
+//         break;
+// }
+
 
 
 //TODO: Rewrite the intersection function from earlier as a switch statement.
 
+// function trafficLight(trafficLight) {
+//     if (trafficLight === "green") {
+//         return "Go!";
+//     } else if (trafficLight === "red") {
+//         return "Stop!";
+//     } else if (trafficLight === "yellow") {
+//         return "Slow Down!";
+//     }else {
+//         return "Proceed with Caution";
+//     }
+// }
+//
+// console.log(trafficLight("yellow"));
 
+// function trafficLight(trafficLight) {
+//     var colorMessage
+//     {
+//         switch (trafficLight) {
+//             case"green":
+//                 colorMessage = "Go!";
+//                 break;
+//             case"yellow":
+//                 colorMessage = "Slow Down!";
+//                 break;
+//             case"red":
+//                 colorMessage = "Stop";
+//                 break;
+//             default:
+//                 colorMessage = "No Cop don't Stop!";
+//         }
+//         return colorMessage;
+//     }
+// }
+//
+// console.log(trafficLight("green"));
 
 // ================ REVERSE ENGINEERING =================
 // Visit each of these links, outline the steps required to achieve each of these demonstrations. You can write code or just write the logic steps that would achieve each output
 
 
 // 1) https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html
+var shopping = confirm("Has the shopping been done?");
+    if (shopping){
+    console.log("Child has earned $10 this week.");
+}else{
+    console.log("Child has earned $5 this week.")
+}
+
 
 
 // 2) https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html
+
+function weatherAnalysis(weather){
+var returnMessage;
+    switch (weather) {
+        case"rainy":
+            returnMessage = "It's raining!";
+            break;
+        case"sunny":
+            returnMessage = "It's sunny!";
+            break;
+        case"snowing":
+            returnMessage = "It's snowing!";
+            break;
+        default:
+            returnMessage = "Have a nice day!";
+            break;
+    }
+    return returnMessage;
+}
+var weather = prompt("Select weather today");
+console.log(weatherAnalysis(weather));
+
+
+
 
 
 // 3) https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html
