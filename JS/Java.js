@@ -89,3 +89,21 @@ if(role === "guest"){
 }else{
     console.log("Unknown User");
 }
+
+
+//for loop
+//i = index
+for(let i = 0; i < 5; i++){
+    if( i % 2 !==0)//<---how to get odd numbers
+        console.log(i);
+    console.log("Hello World!");
+}
+
+
+
+//while loop
+let i = 0;
+while(i <= 5){
+    if(i % 2 !==0) console.log(i);
+    i++;
+}
