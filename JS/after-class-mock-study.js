@@ -19,13 +19,21 @@ function isString(value) {
 // Define a function named isNotString that accepts an input and returns true or false based on whether an input is not a string. Numeric strings will count as strings and should return false.
 
 function isNotString(input){
-    return input !== "";
+    if(typeof(input) !== "string"){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function isNotString(input){
+    return typeof (input) !== "string";
 }
 
 
-// console.log(isNotString(2)); //true
-// console.log(isNotString(true)); //true
-// console.log(isNotString("yes")); //false
+console.log(isNotString(2)); //true
+console.log(isNotString(true)); //true
+console.log(isNotString("yes")); //false
 
 
 
@@ -151,21 +159,15 @@ function isNegative(input){
     }
 }
 
-function isNegative(input){
+function isNegative(input) {
     var input = (parseFloat(input));
     return (input <= 0) && (typeof input == "number");
+}
 
-
-console.log(isNegative(-2)); //true
-console.log(isNegative(12)); //false
-console.log(isNegative("yes")); //false
-console.log(isNegative(false)); //false
-console.log(isNegative(true)); //false
-console.log(isNegative("5")); //false
-
-
-
-
-
-
+// console.log(isNegative(-2)); //true
+// console.log(isNegative(12)); //false
+// console.log(isNegative("yes")); //false
+// console.log(isNegative(false)); //false
+// console.log(isNegative(true)); //false
+// console.log(isNegative("5")); //false
 

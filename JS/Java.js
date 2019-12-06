@@ -117,3 +117,27 @@ do{
     if(i % 2 !==0) console.log(i);
     i++;
 }while(i <= 5);
+
+
+//global sope
+
+const satellite = "The Moon";
+const galaxy = "The Milky Way!";
+const stars = "North Star";
+const callMyNightSky = () => {
+    return "Night Sky: " + satellite + ", " + stars + ", and " + galaxy;
+};
+console.log(callMyNightSky());
+
+
+//block scope
+const logVisibleLightWaves = () => {
+    const lightWaves = "Moonlight";
+    console.log(lightWaves);
+
+}
+//call logVisibleLightWaves from outside the function
+logVisibleLightWaves();
+
+
+//Scope Pollution

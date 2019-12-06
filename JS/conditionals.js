@@ -16,21 +16,21 @@
  * Can you refactor your code to use functions?
  */
 
-// var confirmation = confirm("Would you like to choose a number?");
- // if(confirmation === true){
- //     var userInput = Number(prompt("Your number is..."));
- //     if (!isNaN(userInput)){
- //        var evenOdd = (userInput % 2 === 0) ? "even" : "odd";
- //        var negPos = (userInput >= 0) ? "positive" : "negative";
- //        alert("Number is " + evenOdd + ".");
- //        alert("Number is " + negPos + ".");
- //        alert("Number is " + (userInput + 100));
- //     }else{
- //         alert("Is not a number")
- //     }
- //
- //
- // }
+var confirmation = confirm("Would you like to choose a number?");
+ if(confirmation === true){
+     var userInput = Number(prompt("Your number is..."));
+     if (!isNaN(userInput)){
+        var evenOdd = (userInput % 2 === 0) ? "even" : "odd";
+        var negPos = (userInput >= 0) ? "positive" : "negative";
+        alert("Number is " + evenOdd + ".");
+        alert("Number is " + negPos + ".");
+        alert("Number is " + (userInput + 100));
+     }else{
+         alert("Is not a number")
+     }
+
+
+ }
 
 
 /* ########################################################################## */
