@@ -153,3 +153,10 @@ const callMyDogs = () => {
 };
 console.log(callMyDogs);
 
+//Block Scope Practice
+const mittlyColor = () => {
+    const mittlyColor = "Blue/White";
+    console.log(mittlyColor);
+}
+mittlyColor();
+
