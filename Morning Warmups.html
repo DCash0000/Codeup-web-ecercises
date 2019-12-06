@@ -157,6 +157,17 @@
         //write a JS function called name that takes in a string and returns the names within the string
 
 
+
+
+        //write a js function that recieves another function as a parameter and executes it
+        //then call the function and pass in an anonymous function as an argument
+
+        function functionA(callback){
+            callback();
+        }
+        functionA(function(){
+            alert("It works!")
+        })
     </script>
     </body>
 </html>
