@@ -160,3 +160,9 @@ const mittlyColor = () => {
 }
 mittlyColor();
 
+
+//Arrays
+//Declare a variable using const named hobbies and set it equal to an array with three empty strings inside it
+
+const hobbies = ["", "", ""];
+console.log(hobbies);
