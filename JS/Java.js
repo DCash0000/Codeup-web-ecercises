@@ -119,7 +119,7 @@ do{
 }while(i <= 5);
 
 
-//global sope
+//global scope
 
 const satellite = "The Moon";
 const galaxy = "The Milky Way!";
