@@ -124,6 +124,7 @@ do{
 const satellite = "The Moon";
 const galaxy = "The Milky Way!";
 const stars = "North Star";
+
 const callMyNightSky = () => {
     return "Night Sky: " + satellite + ", " + stars + ", and " + galaxy;
 };
@@ -140,4 +141,15 @@ const logVisibleLightWaves = () => {
 logVisibleLightWaves();
 
 
-//Scope Pollution
+//Scope Pollution(when the global scope is to polluted)
+
+//Global Scope Practice
+const maleDog = "Mittly";
+const femaleDog = "Pixie";
+
+const callMyDogs = () => {
+    return ("Will you please call my dogs, they're names are, " + maleDog + ", and "
+ + femaleDog + ".");
+};
+console.log(callMyDogs);
+
