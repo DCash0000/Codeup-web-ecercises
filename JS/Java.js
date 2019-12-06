@@ -166,3 +166,13 @@ mittlyColor();
 
 const hobbies = ["", "", ""];
 console.log(hobbies);
+
+
+//Accessing Elements
+const hello = "Hello World!";
+console.log(hello[6]);//<-- accessing certain characters in a string
+
+const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious thing.', 'Where there is love there is life.'];
+const listItem = famousSayings[0];
+console.log(famousSayings[2]);
+console.log(famousSayings[3]);
