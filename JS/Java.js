@@ -168,7 +168,7 @@ const hobbies = ["", "", ""];
 console.log(hobbies);
 
 
-//Accessing Elements
+//Accessing Elements and index
 const hello = "Hello World!";
 console.log(hello[6]);//<-- accessing certain characters in a string
 
@@ -176,3 +176,7 @@ const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious th
 const listItem = famousSayings[0];
 console.log(famousSayings[2]);
 console.log(famousSayings[3]);
+
+//Update Elements in an array
+let groceryList = ["bread", "tomatoes", "milk"];//<---change the second element in the array (tomatoes) to avacado
+groceryList[1] = "avacados";
