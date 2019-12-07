@@ -112,23 +112,23 @@
 
 //do while loop
 
-let i = 0;
-do{
-    if(i % 2 !==0) console.log(i);
-    i++;
-}while(i <= 5);
+// let i = 0;
+// do{
+//     if(i % 2 !==0) console.log(i);
+//     i++;
+// }while(i <= 5);
 
 
 //global scope
 
-const satellite = "The Moon";
-const galaxy = "The Milky Way!";
-const stars = "North Star";
-
-const callMyNightSky = () => {
-    return "Night Sky: " + satellite + ", " + stars + ", and " + galaxy;
-};
-console.log(callMyNightSky());
+// const satellite = "The Moon";
+// const galaxy = "The Milky Way!";
+// const stars = "North Star";
+//
+// const callMyNightSky = () => {
+//     return "Night Sky: " + satellite + ", " + stars + ", and " + galaxy;
+// };
+// console.log(callMyNightSky());
 
 
 //block scope
