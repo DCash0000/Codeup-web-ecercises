@@ -21,18 +21,47 @@
 //     console.log(i);
 //     i-=5;
 // }
-for(let i = 100; i >= 5; i++){
-    console.log(i);
-    i-=6;
-}
-// var i = 2;
-// while(i <= 65536){
-//     console.log(i);
-//     i*=2;
-// }
+
+//for loops
+//2
+// for(let i = 1; i <= 10; i++){
+//     console.log("7 x 1 = " + i * 7);
 //
-// var allCones = (Math.floor(Math.random() * 50) + 50);
-// while(allCones = 3){
-//     console.log(allCones);
 // }
-// console.log(allCones);
+
+
+//4
+// for(let i = 1; i <= 9; i++){
+//     console.log(i);
+// }
+
+
+//5
+// for(let i = 100; i >= 5; i++){
+//     console.log(i);
+//     i-=6;
+// }
+
+
+//break loops
+// var numberToStopAt = 5;
+// for(var i = 1; i < 100; i++) {
+//     console.log(i);
+//     if (i === numberToStopAt) {
+//         console.log("We have reached the stopping point: break!");
+//         break;
+//         console.log("You will never see this line.");
+//     }
+// }
+
+
+var numberToSkip = 27;
+for(var i = 1; i < 50; i++) {
+    console.log(i);
+    if (i === numberToSkip) {
+        console.log("Number to skip is: 27")
+        break;
+    }
+}
+
+
