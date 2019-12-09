@@ -29,15 +29,18 @@
 // };
 // //dot notation
 // person.name = "Dalvin";
-//
+//or
 // //bracket notation
+//person["name"] = "Mary";
+
 // console.log(person.name);
 
 //Dec/03/2019
 
 // []<-- array
 //['red', 'blue']<--array with two elements
-//let selectedColors = ['red', 'blue'];
+
+f//let selectedColors = ['red', 'blue'];
 //   selectColor[2] = 'green';<---how to add new elements to array, can also replace with a number with no ""
 
 
@@ -112,23 +115,23 @@
 
 //do while loop
 
-let i = 0;
-do{
-    if(i % 2 !==0) console.log(i);
-    i++;
-}while(i <= 5);
+// let i = 0;
+// do{
+//     if(i % 2 !==0) console.log(i);
+//     i++;
+// }while(i <= 5);
 
 
-//global sope
+//global scope
 
-const satellite = "The Moon";
-const galaxy = "The Milky Way!";
-const stars = "North Star";
-
-const callMyNightSky = () => {
-    return "Night Sky: " + satellite + ", " + stars + ", and " + galaxy;
-};
-console.log(callMyNightSky());
+// const satellite = "The Moon";
+// const galaxy = "The Milky Way!";
+// const stars = "North Star";
+//
+// const callMyNightSky = () => {
+//     return "Night Sky: " + satellite + ", " + stars + ", and " + galaxy;
+// };
+// console.log(callMyNightSky());
 
 
 //block scope
