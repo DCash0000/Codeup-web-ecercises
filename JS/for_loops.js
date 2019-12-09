@@ -29,6 +29,15 @@ for(let i = 1; i <= 10; i++){
 }
 
 //3
+let randomNumbers = Math.floor(Math.random() * 181) + 20;
+for(let i = 1; i <= 10; i++) {
+    randomNumbers = Math.floor(Math.random() * 181) + 20;
+    if (randomNumbers % 2 === 0) {
+        console.log(randomNumbers + " is even");
+    } else {
+        console.log(randomNumbers + " is odd");
+    }
+}
 
 
 
@@ -39,6 +48,11 @@ for(let i = 1; i <= 9; i++){
         stringNumbers += i;
     }
     console.log(stringNumbers);
+}
+//or the .repeat method
+
+for(let i = 1; i <= 9; i++){
+    console.log(i.toString().repeat(i));
 }
 
 
