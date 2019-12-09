@@ -24,44 +24,31 @@
 
 //for loops
 //2
-// for(let i = 1; i <= 10; i++){
-//     console.log("7 x 1 = " + i * 7);
-//
-// }
+for(let i = 1; i <= 10; i++){
+    console.log("7 x " + i + " = " + i * 7);
+}
+
+//3
+
 
 
 //4
-// for(let i = 1; i <= 9; i++){
-//     console.log(i);
-// }
+for(let i = 1; i <= 9; i++){
+    let stringNumbers = "";
+    for(let j = 1; j <= i; j++){
+        stringNumbers += i;
+    }
+    console.log(stringNumbers);
+}
+
 
 
 //5
-// for(let i = 100; i >= 5; i++){
-//     console.log(i);
-//     i-=6;
-// }
-
-
-//break loops
-// var numberToStopAt = 5;
-// for(var i = 1; i < 100; i++) {
-//     console.log(i);
-//     if (i === numberToStopAt) {
-//         console.log("We have reached the stopping point: break!");
-//         break;
-//         console.log("You will never see this line.");
-//     }
-// }
-
-
-var numberToSkip = 27;
-for(var i = 1; i < 50; i++) {
+for(let i = 100; i >= 5; i++){
     console.log(i);
-    if (i === numberToSkip) {
-        console.log("Number to skip is: 27")
-        break;
-    }
+    i-=6;
 }
+
+
 
 

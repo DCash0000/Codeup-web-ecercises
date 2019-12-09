@@ -29,15 +29,18 @@
 // };
 // //dot notation
 // person.name = "Dalvin";
-//
+//or
 // //bracket notation
+//person["name"] = "Mary";
+
 // console.log(person.name);
 
 //Dec/03/2019
 
 // []<-- array
 //['red', 'blue']<--array with two elements
-//let selectedColors = ['red', 'blue'];
+
+f//let selectedColors = ['red', 'blue'];
 //   selectColor[2] = 'green';<---how to add new elements to array, can also replace with a number with no ""
 
 
