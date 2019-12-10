@@ -1,7 +1,7 @@
 //break loops
 //3
 var numberToSkip = 27;
-for(var i = 1; i < 50; i++) {
+for(var i = 1; i <= 50; i++) {
     // check for odds
     if (i % 2 !== 0) {
         // check for numberToSkip
