@@ -129,7 +129,7 @@ console.log("hello from conditionals lec.js!");
 
 //TODO: Write an if statement that alerts true if numberInput is greater than 10, else alert "the number is less than 10"
 //
-// var numberInput = 20;
+// var numberInput = 9;
 // if(numberInput > 10){
 //     alert("True the number is greater than 10!")
 // }else{
@@ -138,15 +138,22 @@ console.log("hello from conditionals lec.js!");
 
 //TODO: Refactor todo#1 as a function named checkIfGameIsOver, that accepts numberOfLives and returns "Sorry, game over" if numberOfLives is 0, else return "Next Level!.
 
+
+
 // function checkIfGameIsOver(numberOfLives){
+//     var returnMessage;
+//
 //     if(numberOfLives === 0){
-//         return("Sorry game over!")
-//     }else{
-//         return("Next Level");
+//         returnMessage = "sorry game is over";
+//     } else {
+//         returnMessage = "next level"
 //     }
+//
+//
+//     return returnMessage;
 // }
 //
-// console.log(checkIfGameIsOver(1));
+// console.log(checkIfGameIsOver(0));
 
 
 //TODO: EXTRA BONUS - Refactor todo#2 from above as a function.
@@ -166,8 +173,9 @@ console.log("hello from conditionals lec.js!");
 
 
 //TODO: Write a confirm asking the user if they are 13 years of age or older. If they are, alert "You may proceed", if they are not, alert "Sorry, you are not able to proceed"
-// var userAge = confirm("Are you 13 years of age or older?");
-// if (userAge >= 13){
+// confirm("Are you 13 years of age or older?");
+// var userAge = 13;
+// if (userAge > 13){
 //     alert("You may proceed!");
 // }else{
 //     alert("Sorry, you are not able to proceed!");
@@ -199,7 +207,7 @@ console.log("hello from conditionals lec.js!");
 // }
 
 //TODO Together: refactor the above statement as a function
-
+//
 // function checkWeather(weather){
 //     if(weather === "snowing"){
 //         return("It's snowing!");
@@ -211,7 +219,7 @@ console.log("hello from conditionals lec.js!");
 //         return("Have a nice day!");
 //     }
 // }
-// console.log(checkWeather("sunny"));
+// console.log(checkWeather("wind"));
 
 // Together: PIZZA PREFERENCE EXAMPLE
 
@@ -251,7 +259,7 @@ console.log("hello from conditionals lec.js!");
 // ================ NESTED STATEMENTS ===============
 //TODO Together: If user is under 15, they are not eligible for a learners permit, else they are. If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligble for a license.
 
-// var userAge = 15;
+// var userAge = 10;
 // var hasPermit = true;
 // if(userAge < 15){
 //     alert("Sorry you are not old enough!");
@@ -285,8 +293,8 @@ console.log("hello from conditionals lec.js!");
 //     message = "Oops, something went wrong.";
 // }
 // console.log(message);
-//
-//
+// //
+// //
 //  success = true;
 //  message = (success) ? "Operation was successful from tern." : "Oops, something went wrong from tern.";
 // console.log(message);
@@ -302,11 +310,12 @@ console.log("hello from conditionals lec.js!");
 // } else {
 //     weatherMessage = "Have a nice day!";
 // }
+// console.log(weatherMessage);
 
 //WRITE YOUR TERNARY STATEMENT HERE!
 
-// var weather = "sunny";
-// var weatherMessage = (weather === "rainy") ? "It's raining!" : "Have a nice day!";
+// var weather = "rainy";
+// var weatherMessage = (weather === "sunny") ? "It's raining!" : "Have a nice day!";
 // console.log(weatherMessage);
 
 
@@ -344,22 +353,30 @@ console.log("hello from conditionals lec.js!");
 
 //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
 
-// var weather = "sunny";
-// switch(weather){
-//     case"rainy":
-//         alert("It's raining!");
-//         break;
-//     case"sunny":
-//         alert("It's sunny!");
-//         break;
-//     case"snowing":
-//         alert("It's snowing!");
-//         break;
-//     default:
-//         alert("Have a nice day!");
-//         break;
-// }
 
+// function checkWeather(weather){
+//     var weatherMessage;
+//
+//     switch(weather){
+//         case "rainy":
+//             weatherMessage = "its raining";
+//             break;
+//         case "sunny":
+//             weatherMessage = "its sunny";
+//             break;
+//         case "snow":
+//             weatherMessage = "its snowing";
+//             break;
+//         default:
+//             weatherMessage = "have a nice day";
+//             break;
+//     }
+//
+//     return weatherMessage;
+//
+// }
+//
+// console.log(checkWeather("wind"));
 
 
 //TODO: Rewrite the intersection function from earlier as a switch statement.
@@ -398,44 +415,44 @@ console.log("hello from conditionals lec.js!");
 //     }
 // }
 //
-// console.log(trafficLight("green"));
+// console.log(trafficLight("pink"));
 
 // ================ REVERSE ENGINEERING =================
 // Visit each of these links, outline the steps required to achieve each of these demonstrations. You can write code or just write the logic steps that would achieve each output
 
 
 // 1) https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html
-var shopping = confirm("Has the shopping been done?");
-    if (shopping){
-    console.log("Child has earned $10 this week.");
-}else{
-    console.log("Child has earned $5 this week.")
-}
+// var shopping = confirm("Has the shopping been done?");
+//     if (shopping){
+//     console.log("Child has earned $10 this week.");
+// }else{
+//     console.log("Child has earned $5 this week.")
+// }
 
 
 
 // 2) https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html
-
-function weatherAnalysis(weather){
-var returnMessage;
-    switch (weather) {
-        case"rainy":
-            returnMessage = "It's raining!";
-            break;
-        case"sunny":
-            returnMessage = "It's sunny!";
-            break;
-        case"snowing":
-            returnMessage = "It's snowing!";
-            break;
-        default:
-            returnMessage = "Have a nice day!";
-            break;
-    }
-    return returnMessage;
-}
-var weather = prompt("Select weather today");
-console.log(weatherAnalysis(weather));
+//
+// function weatherAnalysis(weather){
+// var returnMessage;
+//     switch (weather) {
+//         case"rainy":
+//             returnMessage = "It's raining!";
+//             break;
+//         case"sunny":
+//             returnMessage = "It's sunny!";
+//             break;
+//         case"snowing":
+//             returnMessage = "It's snowing!";
+//             break;
+//         default:
+//             returnMessage = "Have a nice day!";
+//             break;
+//     }
+//     return returnMessage;
+// }
+// var weather = prompt("Select weather today");
+// console.log(weatherAnalysis(weather));
 
 
 
