@@ -12,8 +12,8 @@
         'Neptune'
     ];
 
- let planetsUl = "<ul><li>" + planets.join("</li><li>") + "</ul></li>";
-    console.log(planetsUl);
+ // let planetsUl = "<ul><li>" + planets.join("</li><li>") + "</ul></li>";
+ //    console.log(planetsUl);
 
     /**
      * TODO:
@@ -64,6 +64,15 @@
     // planets.sort();
     // console.log(planets);
 
+    // Create a function that returns true if a string is empty and false otherwise.
+    function isEmpty(s){
+        if(s === ""){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
+    console.log(isEmpty("a"));
 
 })();
