@@ -161,4 +161,27 @@
      *   `showBookInfo` function.
      */
 
+    var title = "Hello";
+    var createBook = function(title, authorFirstName, authorLastName){
+        var book = {};
+        book.title = title;
+        book.author ={};
+        book.author.firstName = authorFirstName;
+        book.author.lastName = authorLastName;
+        return book;
+
+    };
+
+    books.push(createBook("Leviathan", "Scott", "Westfield"));
+
+    var showBookInfo = function(book, i){
+        console.log("Book #" + ( i + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+
+    };
+    books.forEach(showBookInfo);
+
+
+
 })();
