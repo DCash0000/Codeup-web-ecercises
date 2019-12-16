@@ -10,6 +10,12 @@
         .green-background{
             background-color: green;
         }
+        .purple{
+            color: purple;
+        }
+        .cyan{
+            color: cyan;
+        }
 
     </style>
 </head>
@@ -25,6 +31,7 @@
 <!--    <li class="even">Valve Index</li>-->
 <!--</ul>-->
 <ul id="wishList"></ul>
+<button id="button">Click Me!</button>
 <a id="" href="http://codeup.com"></a>
 
 
@@ -69,11 +76,26 @@
         odds[i].style["background-color"] = "green";
     }
 
+    var clicks = 0;
+    var buttonClick = function () {
+        clicks++;
+        console.log("button was clicked " + clicks + " times")
 
-    // var lis = document.getElementsByTagName("li");
-    // console.log(lis);
-    // for(var i = 0; i < lis.length; i++){
-        // console.log(lis[i]);
+    };
+    var button = document.getElementById("button");
+    button.addEventListener("click", function(){
+        clicks++;
+        alert("button was clicked " + clicks + " times")
+    });
+
+    button.addEventListener("mouseover", function() {
+        button.setAttribute("class", "purple")
+
+    });
+    button.addEventListener("mouseout", function() {
+        button.setAttribute("class", "cyan")
+
+    });
 
 </script>
 </body>
