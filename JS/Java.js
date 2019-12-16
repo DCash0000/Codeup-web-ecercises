@@ -102,6 +102,11 @@ f//let selectedColors = ['red', 'blue'];
 //     console.log("Hello World!");
 // }
 
+//Looping in reverse
+for(let counter = 3; counter >=0; counter--){
+    console.log(counter);
+}
+
 
 
 //while loop
