@@ -183,3 +183,12 @@ console.log(famousSayings[3]);
 //Update Elements in an array
 let groceryList = ["bread", "tomatoes", "milk"];//<---change the second element in the array (tomatoes) to avacado
 groceryList[1] = "avacados";
+
+
+//Nested Arrays
+let numberClusters = [[1, 2], [3, 4], [5, 6]];
+
+const target = numberClusters[2][1];
+console.log(target); //<-- will return 6
+
+//
