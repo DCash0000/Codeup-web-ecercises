@@ -194,3 +194,15 @@ const vacationSpots= ["Bali", "Paris", "Tulum"];
 for(let i = 0; i < vacationSpots.length; i++){
     console.log("I would love to visit " + vacationSpots[i]);
 }
+
+//Nested Loops
+const bobsFollowers = ["Abel", "Jim", "Mark", "Jane"];
+const tinasFollowers = ["Abel", "Jim", "Brittany"];
+const mutualFollowers = ["Abel", "Jim"];
+for(let i = 0; i < bobsFollowers.length; i++){
+    for(let j = 0; j< tinasFollowers.length; j++){
+        if(bobsFollowers[i] === tinasFollowers[j]){
+            console.log(mutualFollowers);
+        }
+    }
+}
