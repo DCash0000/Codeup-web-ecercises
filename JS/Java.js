@@ -188,3 +188,9 @@ console.log(famousSayings[3]);
 //Update Elements in an array
 let groceryList = ["bread", "tomatoes", "milk"];//<---change the second element in the array (tomatoes) to avacado
 groceryList[1] = "avacados";
+
+//Looping through Arrays
+const vacationSpots= ["Bali", "Paris", "Tulum"];
+for(let i = 0; i < vacationSpots.length; i++){
+    console.log("I would love to visit " + vacationSpots[i]);
+}
