@@ -17,11 +17,16 @@
 <button id="button">Zoom 5!</button>
 <button id="button1">Zoom 15!</button>
 <button id="button2">Zoom 20!</button>
+<button id="search">Search Button</button>
+<input type="text" id="input">
+<button id="hideButton">Hide Button</button>
+
 
 
 
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js'></script>
 <script src="JS/keys.js"></script>
+<script src="JS/mapbox-geocoder-utils.js"</script>
 <script src="JS/mapbox_maps_api.js"></script>
 
 <script>
@@ -52,7 +57,7 @@ zoom: 10,
 center: [-98.4916, 29.4252]
 });
 
-
+let markerPosition = [markerOptions, markerOptions1, markerOptions2];
 var markerOptions = {
     color: "yellow",
     draggable: true
@@ -65,6 +70,7 @@ var markerOptions2 = {
     color: "blue",
     draggable: true
 };
+
 
 
     var marker = new mapboxgl.Marker(markerOptions)
@@ -112,6 +118,24 @@ var markerOptions2 = {
     document.getElementById("button2").addEventListener("click",function(){
         map.setZoom(20);
     });
+
+    document.getElementById("search").addEventListener("click", function(){
+        var address = document.getElementById("input").value;
+        console.log(address);
+        geocode(address, mapboxToken).then(function (result) {
+            map.setCenter(result)
+        });
+    });
+
+    document.getElementById("hideButton").addEventListener("click", function(){
+        if(markerPosition === true){
+            return(marker.remove + marker1.remove + marker2.remove)
+        }
+
+
+    });
+
+
 
 
 </script>
