@@ -253,3 +253,9 @@ function longestString(arr){
     }
     return longest;
 }
+
+// Write a function definition named getUniqueValues that takes in an array and returns an with only the unique values from that array.
+function getUniqueValues(arr) {
+    var unique = arr.filter((item, i, ar) => arr.indexOf(item) === i);
+    return unique
+}
