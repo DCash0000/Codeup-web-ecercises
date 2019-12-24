@@ -226,3 +226,18 @@ function onlyNegativeOdds(numbers) {
     }
     return odd
 }
+
+// Write a function definition named shortestString that takes in an array of strings and returns the shortest string in the array.
+function shortestString(arr){
+    let shortLength = Infinity;
+    let shortest = "";
+    if(arr.length > 0){
+        for(let i = 0; i < arr.length; i++){
+            if(typeof arr[i] === "string" && arr[i].length < shortLength){
+                shortest = arr[i];
+                shortLength = arr[i].length;
+            }
+        }
+    }
+    return shortest;
+}
