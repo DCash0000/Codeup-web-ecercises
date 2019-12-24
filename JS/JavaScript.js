@@ -213,3 +213,16 @@ while(currentCard !== "spade"){
     currentCard = cards[Math.floor(Math.random() * 4)];
     console.log(currentCard);
 }
+
+
+// Write a function definition named onlyNegativeOdds that takes in sequence of numbers and returns an array containing all the negative odd numbers from the sequence
+function onlyNegativeOdds(numbers) {
+    var odd = [];
+
+    for(var i = 0; i < numbers.length; i++) {
+        if(numbers[i] % 2 === -1 && numbers[i] < 0) {
+            odd.push(numbers[i]);
+        }
+    }
+    return odd
+}
