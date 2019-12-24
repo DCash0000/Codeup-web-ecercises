@@ -241,3 +241,15 @@ function shortestString(arr){
     }
     return shortest;
 }
+
+
+// Write a function definition named longestString that takes in sequence of strings and returns the longest string in the array.
+function longestString(arr){
+    let longest = arr[0];
+    for(let i = 1; i < arr.length; i++){
+        if(arr[i].length > longest.length){
+            longest = arr[i];
+        }
+    }
+    return longest;
+}
