@@ -259,3 +259,12 @@ function getUniqueValues(arr) {
     var unique = arr.filter((item, i, ar) => arr.indexOf(item) === i);
     return unique
 }
+
+// / Write a function definition named elementsTimesTwo that takes in an array of numbers and returns an array with each value multiplied by 2.
+function elementsTimesTwo(arr){
+    let newArray = [];
+    for(let i = 0; i < arr.length; i++){
+        newArray.push(arr[i] * 2);
+    }
+    return newArray
+}
