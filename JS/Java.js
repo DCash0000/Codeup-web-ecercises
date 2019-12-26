@@ -213,3 +213,8 @@ while(currentCard !== "spade"){
     currentCard = cards[Math.floor(Math.random() * 4)];
     console.log(currentCard);
 }
+
+// Write a function named flatten that takes in an array of arrays. Return the flattened array.
+function flatten(arr) {
+    return arr.flat();
+}
