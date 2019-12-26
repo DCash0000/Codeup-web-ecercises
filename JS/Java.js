@@ -218,3 +218,12 @@ while(currentCard !== "spade"){
 function flatten(arr) {
     return arr.flat();
 }
+
+// Write a function definition named addOneToArray that adds one to every number in an array
+function addOneToArray(arr) {
+    var newArr = [];
+    for(var i = 0; i < arr.length; i++){
+        newArr.push(arr[i] + 1)
+    }
+    return newArr;
+}
