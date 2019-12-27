@@ -270,4 +270,13 @@ function getTaxRate(shoppingCart){
 assert(getTaxRate(shoppingCart), .08, "Exercise 96");
 addToDone("Exercise 96 is complete");
 
+// // Write a function named numberOfItemTypes that takes in the shopping cart as input and returns the number of unique item types in the shopping cart.
+// // We're not yet using the quantity of each item, but rather focusing on determining how many different types of items are in the cart.
+function numberOfItemTypes(shoppingCart){
+    return shoppingCart.items.length;
+}
+assert(numberOfItemTypes(shoppingCart), 5, "Exercise 97");
+addToDone("Exercise 97 is complete.")
+
+
 
