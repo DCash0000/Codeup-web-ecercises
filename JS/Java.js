@@ -279,4 +279,17 @@ assert(numberOfItemTypes(shoppingCart), 5, "Exercise 97");
 addToDone("Exercise 97 is complete.")
 
 
+function getAverageSpentPerItem(shoppingCart){
+    let totalPrice = 0;
+    let totalQuantity = 0;
+    for(let i = 0; i < shoppingCart.items.length; i++){
+        totalPrice += (shoppingCart.items[i].price * shoppingCart.items[i].quantity);
+        totalQuantity += shoppingCart.items[i].quantity;
+    }
+    return(totalPrice / totalQuantity);
+}
+assert(getAverageSpentPerItem(shoppingCart), 1.333529411764706, "Exercise 100");
+addToDone("Exercise 100 is complete.")
+
+
 
