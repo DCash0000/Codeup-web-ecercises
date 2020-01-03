@@ -292,4 +292,14 @@ assert(getAverageSpentPerItem(shoppingCart), 1.333529411764706, "Exercise 100");
 addToDone("Exercise 100 is complete.")
 
 
-
+// Write a function called lowestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the lowest priced book.
+// Hint: Much like sometimes start functions with a variable set to zero or float('inf'), you may want to create a object with the price set to float('inf') to compare to each object in the array
+function lowestPriceBook(obj){
+    let leastExpensiveBook = false;
+    for(let i = 0; i < obj.length; i++){
+        if(!leastExpensiveBook || obj[i].price < leastExpensiveBook.price){
+            leastExpensiveBook = obj[i];
+        }
+    }
+    return leastExpensiveBook
+}
