@@ -315,3 +315,13 @@ function lowestPriceBook(obj){
     }
     return mostExpensiveBook;
 }
+
+
+// Write a function named getAverageBookPrice that takes in a array of objects and returns the average book price.
+function getAverageBookPrice(obj){
+    var sum = 0;
+    for(var i = 0; i < obj.length; i++){
+        sum += obj[i].price;
+    }
+    return(sum / obj.length);
+}
