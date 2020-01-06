@@ -37,15 +37,16 @@
         /*.car{*/
         /*    background-color: lightgrey;*/
         /*}*/
-        h1{
-            background-color: yellow;
-        }
-        p{
-            background-color: yellow;
-        }
-        li{
-            background-color: yellow;
-        }
+        /*h1{*/
+        /*    background-color: yellow;*/
+        /*}*/
+        /*p{*/
+        /*    background-color: yellow;*/
+        /*}*/
+        /*li{*/
+        /*    background-color: yellow;*/
+        /*}*/
+
 
 
     </style>
@@ -87,10 +88,26 @@
             // $(".codeup").css("border", "solid 1px red")
 
             //ELEMENT SELECTORS
-            $("#unordered-list").css("font-size", "20px");
-            $("h1", "p", "li").addClass("highlight");
-            var contents = $("h1").html();
-            alert(contents);
+            // $("#unordered-list").css("font-size", "20px");
+            // $("h1", "p", "li").addClass("highlight");
+            // var contents = $("h1").html();
+            // alert(contents);
+
+            //MOUSE EVENTS
+            $("#main-header").click(function(){
+                $(this).css("background-color", "yellow")
+            });
+
+            $("p").dblclick(function(){
+                $(this).css("font-size", "18px");
+            });
+
+            $("li").hover(function(){
+                $("li").css("color", "red");
+            },
+            function(){
+                $("li").css("color", "black");
+            });
 
 
 
