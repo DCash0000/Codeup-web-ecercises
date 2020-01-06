@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercises</title>
+    <style>
+        /*#main-header{*/
+        /*    color: red;*/
+        /*    background-color: blue;*/
+        /*}*/
+        /*#paragraph{*/
+        /*    color: blue;*/
+        /*    background-color: red;*/
+        /*}*/
+        /*#unordered-list{*/
+        /*    color: green;*/
+        /*}*/
+        /*#career{*/
+        /*    background-color: lightblue;*/
+        /*}*/
+        /*#pups{*/
+        /*    background-color: pink;*/
+        /*}*/
+        /*#ending-paragraph{*/
+        /*    color: blue;*/
+        /*    background-color: red;*/
+        /*}*/
+        /*#container{*/
+        /*    color: red;*/
+        /*    background-color: blue;*/
+        /*}*/
+
+
+        /*.money{*/
+        /*    background-color: yellow;*/
+        /*}*/
+        /*.car{*/
+        /*    background-color: lightgrey;*/
+        /*}*/
+        h1{
+            background-color: yellow;
+        }
+        p{
+            background-color: yellow;
+        }
+        li{
+            background-color: yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1 id="main-header">jQuery the beginning!</h1>
+<p id="paragraph">jQuery Practice</p>
+<ul id="unordered-list">
+    <li class="codeup">More money</li>
+    <li id="career">new career</li>
+    <li class="codeup">new car</li>
+    <li id="pups">puppies</li>
+    <li class="codeup">codeUp</li>
+</ul>
+<p id="ending-paragraph">jQuery Practice Over</p>
+<div id="container">
+    <h1>jQuery the End!</h1>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+    (function(){
+        "use strict";
+        $(document).ready(function(){
+
+            //ID SELECTORS
+            // $("#main-header").addClass("red-text");
+            // $("#paragraph").addClass("blue-text");
+            // $("#unordered-list").addClass("green-text");
+            // $(".money").addClass("yellow");
+            // $("#career").addClass("light-blue");
+            // $(".car").addClass("light-grey");
+            // $("#pups").addClass("light-red");
+            // $("#ending-paragraph").addClass("blue-text");
+            // $("#container").addClass("red-text");
+
+            //CLASS SELECTORS
+            // $(".codeup").css("border", "solid 1px red")
+
+            //ELEMENT SELECTORS
+            $("#unordered-list").css("font-size", "20px");
+            $("h1", "p", "li").addClass("highlight");
+            var contents = $("h1").html();
+            alert(contents);
+
+
+
+        })
+    })();
+</script>
+</body>
+</html>
