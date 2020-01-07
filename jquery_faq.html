@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hidden{
+             visibility: hidden;
+         }
+    </style>
+</head>
+<body>
+<button id="show">Hide Items</button>
+
+<ul id="invisible">
+    <li class="invisible">What is the largest National Park?</li>
+    <li class="invisible">What is the smallest National Park?</li>
+    <li class="invisible">Where is the largest National Park located?</li>
+    <li class="invisible">Where is the smallest National Park located?</li>
+    <li class="invisible">How many National Parks exist in North America?</li>
+    <li class="invisible">What National Park is the Oldest?</li>
+    <li class="invisible">What National Park is th Youngest?</li>
+    <li class="invisible">Where is Old Faithful located?</li>
+    <li class="invisible">What National Park has the highest peak?</li>
+    <li class="invisible">What National Park has the lowest peak?</li>
+</ul>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+    $(document).ready(function(){
+        $("#show").click(function () {
+            if($(this).text() === "Show List"){
+                $(this).text("Hide List");
+                $("#invisible").removeClass("hidden");
+            }else{
+                $(this).text("Show List");
+                $("#invisible").addClass("hidden");
+            }
+        });
+
+
+    })
+
+
+</script>
+</body>
+</html>
