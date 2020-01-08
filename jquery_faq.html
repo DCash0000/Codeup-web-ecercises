@@ -7,30 +7,22 @@
         .invisible{
              visibility: hidden;
          }
-        .img1{
-            height: 25%;
-            width: 25%;
-        }
-        .img2{
-            height: 25%;
-            width: 25%;
-        }
-        .img3{
-            height: 25%;
-            width: 25%;
+        .frame{
+            height: 150px;
+            width: 150px;
         }
         #div1{
             float: left;
-            border-style: solid;
+            border: solid ;
         }
         #div2{
             float: left;
-            border-style: solid;
+            border: solid;
         }
 
         #div3{
             float: right;
-            border-style: solid;
+            border: solid;
         }
         #container{
             display: flex;
@@ -90,16 +82,20 @@
     <li>Not the deepest canyon in the world</li>
     <li>No dinosaur bones in the Grand Canyon</li>
 </ul>
-<button id="liButton">Last li edit Button</button>
+<button id="liButton">Last li HighLight Button</button>
 <br>
 //Bonus
 <div id="container">
-<div id="div1"><img class="img1" src="IMG/animal1.jpg" alt=""></div>
+
+<div><img class="frame invisible" id="div1" src="IMG/animal1.jpg" alt=""></div>
 <button id="swap-img1">Swap Image 1</button>
-<div id="div2"><img class="img2" src="IMG/animal2.jpg" alt=""></div>
+
+<div><img class="frame invisible" id="div2" src="IMG/animal2.jpg" alt=""></div>
 <button id="swap-img2">Swap Image 2</button>
-<div id="div3"><img class="img3" src="IMG/animal3.jpg" alt=""></div>
+
+<div><img class="frame invisible" id="div3" src="IMG/animal3.jpg" alt=""></div>
 <button id="swap-img3">Swap Image 3</button>
+
 </div>
 
 
@@ -132,7 +128,22 @@
         $("ul").each(function () {
             $(this).children("li").first().css("color", "blue")
         })
-    })
+    });
+
+    $("#swap-img1").click(function(event){
+        event.preventDefault();
+        $("#div1").toggleClass("invisible")
+    });
+
+    $("#swap-img2").click(function(event){
+        event.preventDefault();
+        $("#div2").toggleClass("invisible")
+    });
+
+    $("#swap-img3").click(function(event){
+        event.preventDefault();
+        $("#div3").toggleClass("invisible")
+    });
 
 
 </script>
