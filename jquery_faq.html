@@ -33,6 +33,15 @@
     </style>
 </head>
 <body>
+<h2>Fade in after 8 seconds</h2>
+
+<div>
+    <h1>Would you like to sign up for our newsletter? </h1>
+    <span>x</span>
+</div>
+
+<br>
+
 <button id="show">Show Items</button>
 
 <dl>
@@ -118,11 +127,11 @@
         })
     });
 
-    $("h3").click(function () {
-        $("li").each(function () {
-            $("li").css("font-weight", "bold")
-        })
-    });
+    // $("h3").click(function () {
+    //     $("li").each(function () {
+    //         $("li").css("font-weight", "bold")
+    //     })
+    // });
 
     $("ul").click(function () {
         $("ul").each(function () {
@@ -144,6 +153,24 @@
         event.preventDefault();
         $("#div3").toggleClass("invisible")
     });
+
+    //Effects
+    $("span").click(function () {
+        $("div").first().hide();
+    });
+
+
+    $("h3").click(function () {
+        $("ul").each(function () {
+            $("ul").slideUp();
+        })
+    });
+
+    $("h2").hide()
+    setTimeout(function () {
+        $("h2").fadeIn(8000)
+
+    })
 
 
 </script>
