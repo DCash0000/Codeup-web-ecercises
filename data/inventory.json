@@ -1,0 +1,77 @@
+[
+    {
+        "title": "Hammer",
+        "quantity": 25,
+        "categories": [
+            "tool"
+        ],
+        "price": 20
+    },
+    {
+        "title": "Drill",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "powered"
+        ],
+        "price": 100
+    },
+    {
+        "title": "Mower",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "gas",
+            "outdoor"
+        ],
+        "price": 200
+    },
+    {
+        "title": "Screwdrivers",
+        "quantity": 25,
+        "categories": [
+            "tool"
+        ],
+        "price": 10
+    },
+    {
+        "title": "Shovel",
+        "quantity": 11,
+        "categories": [
+            "tool"
+        ],
+        "price": 15
+    },
+    {
+        "title": "flashlight",
+        "quantity": 15,
+        "categories": [
+            "tool"
+        ],
+        "price": 9
+    },
+    {
+        "title": "flashlight",
+        "quantity": 15,
+        "categories": [
+            "tool"
+        ],
+        "price": 9
+    },
+    {
+        "title": "flashlight",
+        "quantity": 15,
+        "categories": [
+            "tool"
+        ],
+        "price": 9
+    },
+    {
+        "title": "ball",
+        "quantity": 15,
+        "categories": [
+            "tool"
+        ],
+        "price": 9
+    }
+]
