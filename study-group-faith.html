@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="page">
+
+    <hl id="header">List</hl> <h2>Buy groceries</h2>
+    <ul>
+    <li id="one" class="hot"><em>fresh</em> figs</li>
+    <li id="two" class="hot">pine nuts</li>
+    <li id="three" class="hot">honey</li>
+    <li id="four">balsamic vinegar</li>
+    </ul>
+</div>
+<script></script>
+<script>
+
+    function change () {
+        let one = document.getElementById('one');
+    }
+
+
+        ///changing background color using dom
+        document.body.style.backgroundColor = "yellow";
+
+    document.getElementById('page').setAttribute('style', 'visibility: hidden');
+    setTimeout(function () {
+        document.getElementById('page').setAttribute('style', 'visibility: visible');
+        console.log('ready')
+    }, 5000);
+
+
+
+</script>
+</body>
+</html>

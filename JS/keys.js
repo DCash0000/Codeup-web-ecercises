@@ -1,0 +1,1 @@
+let mapboxToken = "pk.eyJ1IjoiZGNhc2giLCJhIjoiY2s0YTA1aXpqMGFyeDNtbXM5NmcxdHVodyJ9.zwZ6k20SBaKIWdNFae4GEg";

@@ -268,3 +268,5 @@ function elementsTimesTwo(arr){
     }
     return newArray
 }
+
+

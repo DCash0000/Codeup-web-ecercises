@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+    <style>
+        .alert{
+        background: url("IMG/konami-proyectos.jpg") no-repeat center center fixed;
+        background-size: cover;
+        }
+
+        .alert1{
+            background: url("IMG/yugioh-1085605-1280x0.jpeg") no-repeat center center fixed;
+            background-size: cover;
+        }
+        /*.heading{*/
+        /*    margin-left: 425px;*/
+        /*}*/
+        .img{
+            height: 80px;
+            margin-left: 467px;
+        }
+
+
+
+    </style>
+</head>
+<body class="body">
+<h1 class="heading">Konami Games!!!</h1>
+<!--<img class="img" src="IMG/game-controller.jpeg" alt="">-->
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+    // $(document).keyup(function (event) {
+    //     console.log(event.keyCode);
+    // });
+    // function konamiCode(event){
+    //     let input = "";
+    //     let key = "3838404037393739666513";
+    //     $(document).keyup(function (e) {
+    //         input += ("" + e.keyCode);
+    //         if(input === key){
+    //             return event();
+    //         }
+    //         if(!key.indexOf(input)) return;
+    //         input = ("" + e.keyCode);
+    //     });
+    // }
+    //
+    // function konamiImage(){
+    //     $("#the-div").append('<img id="the-img" src="IMG/konami.img" alt="">')
+    // }
+    //
+    //
+    //
+    // konamiCode(function(){alert("cheat activated")})
+
+
+
+
+        let input = "";
+        let key = "3838404037393739666513";
+        let key1 = "656667684950515213";
+        $(document).keyup(function (e) {
+            console.log(input);
+            input += ("" + e.keyCode);
+            if(input === key){
+                alert("code activated");
+                $(".body").addClass("alert");
+                $(".heading").css({
+                    fontsize: "100px",
+                    color: "red"
+                });
+                let audio = new Audio("05 Stage Clear.mp3");
+                audio.play()
+            }if(input === key1){
+                alert("code 2 activated");
+                $(".body").addClass("alert1");
+                $(".heading").css({
+                    fontsize: "100px",
+                    color: "red"
+                })
+                let audio = new Audio("yugioh.mp3");
+                audio.play();
+            }
+            if( !key1.indexOf(input) || !key.indexOf(input)) return;
+            input = ("" + e.keyCode);
+        });
+
+        $()
+
+
+</script>
+</body>
+</html>

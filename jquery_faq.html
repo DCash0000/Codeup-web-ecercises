@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .invisible{
+             visibility: hidden;
+         }
+        .frame{
+            height: 150px;
+            width: 150px;
+        }
+        #div1{
+            float: left;
+            border: solid ;
+        }
+        #div2{
+            float: left;
+            border: solid;
+        }
+
+        #div3{
+            float: right;
+            border: solid;
+        }
+        #container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<h2>Fade in after 8 seconds</h2>
+
+<div>
+    <h1>Would you like to sign up for our newsletter? </h1>
+    <span>x</span>
+</div>
+
+<br>
+
+<button id="show">Show Items</button>
+
+<dl>
+    <dt>What is the largest National Park?</dt>
+        <dd class="invisible">a</dd>
+    <dt>What is the smallest National Park?</dt>
+        <dd class="invisible">b</dd>
+    <dt>Where is the largest National Park located?</dt>
+        <dd class="invisible">c</dd>
+    <dt>Where is the smallest National Park located?</dt>
+        <dd class="invisible">d</dd>
+    <dt>How many National Parks exist in North America?</dt>
+        <dd class="invisible">e</dd>
+    <dt>What National Park is the Oldest?</dt>
+        <dd class="invisible">f</dd>
+    <dt>What National Park is th Youngest?</dt>
+        <dd class="invisible">g</dd>
+    <dt>Where is Old Faithful located?</dt>
+        <dd class="invisible">h</dd>
+    <dt>What National Park has the highest peak?</dt>
+        <dd class="invisible">i</dd>
+    <dt>What National Park has the lowest peak?</dt>
+        <dd class="invisible">j</dd>
+</dl>
+
+//Traversing
+<h3>Yellow Stone National Park</h3>
+<ul>
+    <li>Larger than Rhode Island and Delaware Combined</li>
+    <li>Veteran of the Lewis and Clark expedition may have been first American to see Yellowstone</li>
+    <li>One of the parks earliest explorers was stranded for 37 days</li>
+    <li>The park sits atop the largest Super Volcano in North America</li>
+</ul>
+
+<h3>Yosemite National Park</h3>
+<ul>
+    <li>Is the nations 3rd National Park</li>
+    <li>Yosemite's granite rock formations glow like fire at sunset</li>
+    <li>The park supports more than 400 species</li>
+    <li>Home to one of the tallest waterfalls in the world</li>
+</ul>
+
+<h3>Grand Canyon National Park</h3>
+<ul>
+    <li>Not sure of the age</li>
+    <li>Creates it's own weather</li>
+    <li>Not the deepest canyon in the world</li>
+    <li>No dinosaur bones in the Grand Canyon</li>
+</ul>
+<button id="liButton">Last li HighLight Button</button>
+<br>
+//Bonus
+<div id="container">
+
+<div><img class="frame invisible" id="div1" src="IMG/animal1.jpg" alt=""></div>
+<button id="swap-img1">Swap Image 1</button>
+
+<div><img class="frame invisible" id="div2" src="IMG/animal2.jpg" alt=""></div>
+<button id="swap-img2">Swap Image 2</button>
+
+<div><img class="frame invisible" id="div3" src="IMG/animal3.jpg" alt=""></div>
+<button id="swap-img3">Swap Image 3</button>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+        $("#show").click(function(event){
+            event.preventDefault();
+            $("dd").toggleClass("invisible")
+    });
+
+    $("dt").click(function(){
+        $(this).css("background-color", "yellow")
+    });
+
+    //Traversing
+    $("#liButton").click(function () {
+        $("ul").each(function () {
+            $(this).children("li").last().css("background-color", "yellow")
+        })
+    });
+
+    // $("h3").click(function () {
+    //     $("li").each(function () {
+    //         $("li").css("font-weight", "bold")
+    //     })
+    // });
+
+    $("ul").click(function () {
+        $("ul").each(function () {
+            $(this).children("li").first().css("color", "blue")
+        })
+    });
+
+    $("#swap-img1").click(function(event){
+        event.preventDefault();
+        $("#div1").toggleClass("invisible")
+    });
+
+    $("#swap-img2").click(function(event){
+        event.preventDefault();
+        $("#div2").toggleClass("invisible")
+    });
+
+    $("#swap-img3").click(function(event){
+        event.preventDefault();
+        $("#div3").toggleClass("invisible")
+    });
+
+    //Effects
+    $("span").click(function () {
+        $("div").first().hide();
+    });
+
+
+    $("h3").click(function () {
+        $("ul").each(function () {
+            $("ul").slideUp();
+        })
+    });
+
+    $("h2").hide()
+    setTimeout(function () {
+        $("h2").fadeIn(8000)
+
+    })
+
+
+</script>
+</body>
+</html>
