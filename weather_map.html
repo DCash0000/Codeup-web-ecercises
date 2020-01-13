@@ -46,18 +46,16 @@
     <img  id="nextDayIcon" alt="">
 
 </div>
-
-<!--    &lt;!&ndash;Map&ndash;&gt;-->
-<!--    <div class="" id="map">-->
-
-<!--    </div>-->
 </div>
 
+<!--Input Form-->
 <form action="">
     <input id="lat" type="text" placeholder="Latitude">
     <input id="lon" type="text" placeholder="Longitude">
     <button id="lat-lon">Lat/Lon</button>
 </form>
+
+<!--Map-->
 <div class="" id="map">
 
 </div>
@@ -132,6 +130,7 @@
                         "</div>");
                 });
             }
+            getWeather(29.4252, -98.4916);
 
             //DIV
 
@@ -149,12 +148,20 @@
                 color: "yellow",
                 draggable: true
             };
+            <!--Marker Drag-->
             var marker = new mapboxgl.Marker(markerOptions)
                 .setLngLat([-98.4896, 29.4266])
-                .setPopup(new mapboxgl.Popup()
-                    .setLngLat([-98.4896, 29.4266])
-                    .setHTML("<h1>La Pan</h1><p>They have good sandwiches!</p>"))
+                // .setPopup(new mapboxgl.Popup()
+                //     .setLngLat([-98.4896, 29.4266])
+                //     .setHTML("<h1>La Pan</h1><p>They have good sandwiches!</p>"))
                 .addTo(map);
+
+            marker.on('dragend', function () {
+                let LngLat = marker.getLngLat();
+                console.log(LngLat);
+                getWeather(LngLat.lat, LngLat.lng)
+
+            });
 
 
 
