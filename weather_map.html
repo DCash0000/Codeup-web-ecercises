@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Title</title>
+    <style>
+        /*.mainContainer{*/
+        /*    background-color: lightgreen;*/
+        /*}*/
+        .todayContainer{
+            background-color: yellow;
+        }
+        /*.todayData{*/
+        /*    border: solid 1px black;*/
+        /*}*/
+        .tomorrowContainer{
+            background-color: pink;
+        }
+        .nextDayContainer{
+            background-color: lightblue;
+        }
+        #map{
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<div class="d-flex justify-content-center" id="mainContainer">
+<!--Todays Forecast-->
+<div class="todayContainer" id="today">
+    <img src="icon/Cloud-Sun.svg" id="todayIcon" alt="">
+</div>
+
+<!--Tomorrows Forecast-->
+<div class="tomorrowContainer" id="tomorrow">
+    <img src="icon/Moon-Full.svg" id="tomorrowIcon" alt="">
+
+</div>
+
+<!--Next day Forecast-->
+<div class="nextDayContainer" id="nextDay">
+    <img src="icon/Cloud-Rain-Moon.svg" id="nextDayIcon" alt="">
+
+</div>
+
+<!--    &lt;!&ndash;Map&ndash;&gt;-->
+<!--    <div class="" id="map">-->
+
+<!--    </div>-->
+</div>
+<div class="" id="map">
+
+</div>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="JS/keys.js"></script>
+<!--Mapbox jQuery-->
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css' rel='stylesheet' />
+<!--Mapbox Geocoder JS-->
+<script src="JS/mapbox-geocoder-utils.js"></script>
+
+<script>
+    $(function(){
+        "use strict";
+        $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/29.4241,-98.4936").done(function(weather){
+            console.log(weather);
+
+            const dateObject = new Date(weather.currently.time * 1000);
+            console.log(dateObject.toString());
+
+
+
+        $("#today").append(
+                "<div id='high'>" + "High: " + weather.daily.data[0].temperatureHigh + "°" +
+                "</div><div id='low'>" + "Low: " + weather.daily.data[0].temperatureLow + "°" +
+                "</div><div id='preciptToday'>" + "Precipitation: " + weather.daily.data[0].precipProbability + "%" +
+                "</div>"
+            );
+
+            $("#tomorrow").append(
+                "<div id='tomorrowHigh'>" + "High: " + weather.daily.data[1].temperatureHigh + "°" +
+                "</div><div id='tomorrowLow'>" + "Low: " + weather.daily.data[1].temperatureLow + "°" +
+                "</div><div id='preciptTomorrow'>" + "Precipitaion: " + weather.daily.data[1].precipProbability + "%" +
+                "</div>"
+            );
+            $("#nextDay").append(
+                "<div id='nextDayHigh'>" + "High: " + weather.daily.data[2].temperatureHigh + "°" +
+                "</div><div id='nextDayLow'>" + "Low: " + weather.daily.data[2].temperatureLow + "°" +
+                "</div><div id='preciptNextDay'>" + "Precipitation: " + weather.daily.data[2].precipProbability + "%" +
+                "</div>"
+            );
+
+            //MapBox Function
+            mapboxgl.accessToken = mapboxToken;
+            let map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v9',
+                zoom: 10,
+                center: [-98.4936, 29.4241],
+            });
+
+            //Marker
+            var markerOptions = {
+                color: "yellow",
+                draggable: true
+            };
+            var marker = new mapboxgl.Marker(markerOptions)
+                .setLngLat([-98.4896, 29.4266])
+                .setPopup(new mapboxgl.Popup()
+                    .setLngLat([-98.4896, 29.4266])
+                    .setHTML("<h1>La Pan</h1><p>They have good sandwiches!</p>"))
+                .addTo(map);
+
+            const icons =
+            [
+                {
+                    'conditions': "clear-day",
+                    "url": 'icon/Sun.svg'
+                },
+                {
+                    'conditions': "clear-night",
+                    "url": 'icon/Moon-Full.svg'
+                },
+                {
+                    'conditions': "rain",
+                    "url": 'icon/Cloud-Rain-Moon.svg'
+                },
+                {
+                    'conditions': "snow",
+                    "url": 'icon/Cloud-Rain-Moon.svg'
+                },
+                {
+                    'conditions': "sleet",
+                    "url": 'icon/Cloud-Rain-Moon.svg'
+                },
+                {
+                    'conditions': "wind",
+                    "url": 'icon/Cloud-Rain-Moon.svg'
+                },
+                {
+                    'conditions': "fog",
+                    "url": 'icon/Cloud-Rain-Moon.svg'
+                },
+                {
+                    'conditions': "cloudy",
+                    "url": 'icon/Cloud-Rain-Moon.svg'
+                },
+                {
+                    'conditions': "partly-cloudy-day",
+                    "url": 'icon/Cloud-Rain-Moon.svg'
+                },
+                {
+                    'conditions': "partly-cloudy-night",
+                    "url": 'icon/Cloud-Rain-Moon.svg'
+                },
+
+
+            ];
+
+            $("#todayIcon").attr("src", dailyIconUrl());
+
+            function dailyIconUrl() {
+                for(let i = 0; i < icons.length; i++){
+                    if(weather.daily.data[0].icon === icons[i].conditions)
+                        return icons[i].url
+                }
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+        });
+    });
+</script>
+</body>
+</html>
