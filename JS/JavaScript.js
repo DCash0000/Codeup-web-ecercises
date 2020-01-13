@@ -214,114 +214,59 @@ while(currentCard !== "spade"){
     console.log(currentCard);
 }
 
-// Write a function named flatten that takes in an array of arrays. Return the flattened array.
-function flatten(arr) {
-    return arr.flat();
-}
 
-// Write a function definition named addOneToArray that adds one to every number in an array
-function addOneToArray(arr) {
-    var newArr = [];
-    for(var i = 0; i < arr.length; i++){
-        newArr.push(arr[i] + 1)
-    }
-    return newArr;
-}
+// Write a function definition named onlyNegativeOdds that takes in sequence of numbers and returns an array containing all the negative odd numbers from the sequence
+function onlyNegativeOdds(numbers) {
+    var odd = [];
 
-
-const shoppingCart = {
-    "tax": .08,
-    "items": [
-        {
-            "title": "orange juice",
-            "price": 3.99,
-            "quantity": 1
-        },
-        {
-            "title": "rice",
-            "price": 1.99,
-            "quantity": 3
-        },
-        {
-            "title": "beans",
-            "price": 0.99,
-            "quantity": 3
-        },
-        {
-            "title": "chili sauce",
-            "price": 2.99,
-            "quantity": 1
-        },
-        {
-            "title": "chocolate",
-            "price": 0.75,
-            "quantity": 9
-        }
-    ]
-}
-
-
-// Exercise 96
-// Write a function named getTaxRate that takes in the above shopping cart as input and returns the tax rate.
-// Hint: How do you access a key's value on a object? The tax rate is one key of the entire shoppingCart object.
-function getTaxRate(shoppingCart){
-    return shoppingCart.tax
-}
-assert(getTaxRate(shoppingCart), .08, "Exercise 96");
-addToDone("Exercise 96 is complete");
-
-// // Write a function named numberOfItemTypes that takes in the shopping cart as input and returns the number of unique item types in the shopping cart.
-// // We're not yet using the quantity of each item, but rather focusing on determining how many different types of items are in the cart.
-function numberOfItemTypes(shoppingCart){
-    return shoppingCart.items.length;
-}
-assert(numberOfItemTypes(shoppingCart), 5, "Exercise 97");
-addToDone("Exercise 97 is complete.")
-
-
-function getAverageSpentPerItem(shoppingCart){
-    let totalPrice = 0;
-    let totalQuantity = 0;
-    for(let i = 0; i < shoppingCart.items.length; i++){
-        totalPrice += (shoppingCart.items[i].price * shoppingCart.items[i].quantity);
-        totalQuantity += shoppingCart.items[i].quantity;
-    }
-    return(totalPrice / totalQuantity);
-}
-assert(getAverageSpentPerItem(shoppingCart), 1.333529411764706, "Exercise 100");
-addToDone("Exercise 100 is complete.")
-
-
-// Write a function called lowestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the lowest priced book.
-// Hint: Much like sometimes start functions with a variable set to zero or float('inf'), you may want to create a object with the price set to float('inf') to compare to each object in the array
-function lowestPriceBook(obj){
-    let leastExpensiveBook = false;
-    for(let i = 0; i < obj.length; i++){
-        if(!leastExpensiveBook || obj[i].price < leastExpensiveBook.price){
-            leastExpensiveBook = obj[i];
+    for(var i = 0; i < numbers.length; i++) {
+        if(numbers[i] % 2 === -1 && numbers[i] < 0) {
+            odd.push(numbers[i]);
         }
     }
-    return leastExpensiveBook
+    return odd
 }
 
-// Write a function called highestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the highest priced book.
-// Hint: Much like sometimes start functions with a variable set to zero, you may want to create a object with the price set to zero to compare to each object's price in the array
-    function highestPriceBook(obj){
-    let mostExpensiveBook = false;
-    for(let i = 0; i < obj.length; i++){
-        if(!mostExpensiveBook || obj[i].price > mostExpensiveBook.price){
-            mostExpensiveBook = obj[i];
+// Write a function definition named shortestString that takes in an array of strings and returns the shortest string in the array.
+function shortestString(arr){
+    let shortLength = Infinity;
+    let shortest = "";
+    if(arr.length > 0){
+        for(let i = 0; i < arr.length; i++){
+            if(typeof arr[i] === "string" && arr[i].length < shortLength){
+                shortest = arr[i];
+                shortLength = arr[i].length;
+            }
         }
     }
-    return mostExpensiveBook;
+    return shortest;
 }
 
 
-// Write a function named getAverageBookPrice that takes in a array of objects and returns the average book price.
-function getAverageBookPrice(obj){
-    var sum = 0;
-    for(var i = 0; i < obj.length; i++){
-        sum += obj[i].price;
+// Write a function definition named longestString that takes in sequence of strings and returns the longest string in the array.
+function longestString(arr){
+    let longest = arr[0];
+    for(let i = 1; i < arr.length; i++){
+        if(arr[i].length > longest.length){
+            longest = arr[i];
+        }
     }
-    return(sum / obj.length);
+    return longest;
 }
+
+// Write a function definition named getUniqueValues that takes in an array and returns an with only the unique values from that array.
+function getUniqueValues(arr) {
+    var unique = arr.filter((item, i, ar) => arr.indexOf(item) === i);
+    return unique
+}
+
+// / Write a function definition named elementsTimesTwo that takes in an array of numbers and returns an array with each value multiplied by 2.
+function elementsTimesTwo(arr){
+    let newArray = [];
+    for(let i = 0; i < arr.length; i++){
+        newArray.push(arr[i] * 2);
+    }
+    return newArray
+}
+
+
