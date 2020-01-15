@@ -151,9 +151,6 @@
             <!--Marker Drag-->
             var marker = new mapboxgl.Marker(markerOptions)
                 .setLngLat([-98.4896, 29.4266])
-                // .setPopup(new mapboxgl.Popup()
-                //     .setLngLat([-98.4896, 29.4266])
-                //     .setHTML("<h1>La Pan</h1><p>They have good sandwiches!</p>"))
                 .addTo(map);
 
             marker.on('dragend', function () {
