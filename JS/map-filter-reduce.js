@@ -36,11 +36,6 @@ const users = [
     }
 ];
 
-//*************Step 1***************//
- let userLanguages = users.filter(user => user.languages.length >= 3);
-// console.log(userLanguages);
-
-
 //***************Step 2***************//
 let threeLanguages = users.filter(user => user.languages.length >= 3);
 // console.log(threeLanguages);
@@ -51,40 +46,44 @@ let userEmail = [];
 users.map(user => {
     userEmail.push(user.email)
 });
-// console.log(userEmail);
+console.log(userEmail);
 
 
 //****************Step 4***************//
-const totalExperience = users.reduce(((totalExperience, person) =>
-    totalExperience + person.yearsOfExperience), 0);
-// console.log(totalExperience / users.length);
+const totalExperience = users.reduce(((totalExperience, user) =>
+    totalExperience + user.yearsOfExperience), 0);
+console.log('Years of experience: ' + totalExperience);
+console.log('Average years of experience: ' + totalExperience / users.length);
 
 
 //****************Step 5***************//
 let longestEmail = '';
 users.reduce(((letterCount, user) => {
     if(user.email.length > letterCount){
-        letterCount = user.email.length
+        letterCount = user.email.length;
         longestEmail = user.email;
     }
     return letterCount;
 }), 0);
-// console.log(longestEmail);
+console.log(longestEmail);
 
 
 //***************Step 6***************//
 const instructorsNames = users.reduce((nameCount, nameList) => {
-    return nameCount + " " + nameList.name
+    return nameCount  + nameList.name + ", "
 }, 'your instructors are: ');
 
 console.log(instructorsNames);
 
 
 //***************Bonus**************//
-const knownLanguages = users.reduce(((lang, user) =>
-lang + user.languages), '');
-console.log(knownLanguages);
+// const knownLanguages = users.reduce(((lang, user) =>
+// lang + user.languages), '');
+// console.log(knownLanguages);
 
+let knownLanguages = users.reduce((knownLangugages, user) => {
+    user.languages
+})
 
 
 
