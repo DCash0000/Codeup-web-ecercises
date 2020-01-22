@@ -1,5 +1,9 @@
 "use strict";
-/***
+// <<<<<<< weather-map
+// =======
+
+// >>>>>>> master
+// /***
  * geocode is a method to search for coordinates based on a physical address and return
  * @param {string} search is the address to search for the geocoded coordinates
  * @param {string} token is your API token for MapBox
@@ -23,6 +27,11 @@ function geocode(search, token) {
             return data.features[0].center;
         });
 }
+// <<<<<<< weather-map
+// =======
+
+
+// >>>>>>> master
 /***
  * reverseGeocode is a method to search for a physical address based on inputted coordinates
  * @param {object} coordinates is an object with properties "lat" and "lng" for latitude and longitude

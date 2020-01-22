@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map{
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+<h1>My Fav Resturants</h1>
+<div id="map"></div>
+<button id="button">Zoom 5!</button>
+<button id="button1">Zoom 15!</button>
+<button id="button2">Zoom 20!</button>
+<button id="search">Search Button</button>
+<input type="text" id="input">
+<button id="hideButton">Hide Button</button>
+
+
+
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js'></script>
+<script src="JS/keys.js"></script>
+<script src="JS/mapbox-geocoder-utils.js"</script>
+<script src="JS/mapbox_maps_api.js"></script>
+
+<script>
+    var favRestaurants = [
+        {
+            name: "La Pan",
+            address: "301 E Houston St. San Antonio TX, 78205",
+            typeOfFood: "Bakery"
+        },
+        {
+            name: "Big Lou's",
+            address: "2048 S WW White Rd, San Antonio TX, 78222",
+            typeOfFood: "Pizza"
+        },
+        {
+            name: "Pappadeaux",
+            address: "15715 I-10 West, San Antonio TX, 78257",
+            typeOfFood: "SeaFood"
+
+        }
+    ];
+
+mapboxgl.accessToken = mapboxToken;
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v9',
+zoom: 10,
+center: [-98.4916, 29.4252]
+});
+
+let markerPosition = [markerOptions, markerOptions1, markerOptions2];
+var markerOptions = {
+    color: "yellow",
+    draggable: true
+};
+var markerOptions1 = {
+    color: "red",
+    draggable: true
+};
+var markerOptions2 = {
+    color: "blue",
+    draggable: true
+};
+
+
+
+    var marker = new mapboxgl.Marker(markerOptions)
+        .setLngLat([-98.4896, 29.4266])
+        .setPopup(new mapboxgl.Popup()
+            .setLngLat([-98.4896, 29.4266])
+            .setHTML("<h1>La Pan</h1><p>They have good sandwiches!</p>"))
+
+
+        .addTo(map);
+
+    var marker1 = new mapboxgl.Marker(markerOptions1)
+        .setLngLat([-98.4045, 29.3944])
+        .setPopup(new mapboxgl.Popup()
+            .setLngLat([-98.4045, 29.3944])
+            .setHTML("<h1>Big Lou's</h1><p>The pizza is HUGE!!!</p>"))
+        .addTo(map);
+    // var popup1 = new mapboxgl.Popup()
+    //     .setLngLat([-98.4045, 29.3944])
+    //     .setHTML("<p>Big Lou's</p>")
+    //     .addTo(map);
+
+
+   var marker2 = new mapboxgl.Marker(markerOptions2)
+        .setLngLat([-98.5974, 29.5874])
+       .setPopup(new mapboxgl.Popup()
+           .setLngLat([-98.5974, 29.5874])
+           .setHTML("<h1>Pappdeaux</h1> <p>My favorite place to eat!</p>"))
+        .addTo(map);
+    // var popup2 = new mapboxgl.Popup()
+    //     .setLngLat([-98.5974, 29.5874])
+    //     .setHTML("<p>Pappdeaux</p>")
+    //     .addTo(map);
+
+    favRestaurants.forEach(function(restaurant){
+        console.log(restaurant)
+
+    });
+    document.getElementById("button").addEventListener("click",function(){
+        map.setZoom(5);
+    });
+    document.getElementById("button1").addEventListener("click",function(){
+        map.setZoom(15);
+    });
+    document.getElementById("button2").addEventListener("click",function(){
+        map.setZoom(20);
+    });
+
+    document.getElementById("search").addEventListener("click", function(){
+        var address = document.getElementById("input").value;
+        console.log(address);
+        geocode(address, mapboxToken).then(function (result) {
+            map.setCenter(result)
+        });
+    });
+
+    document.getElementById("hideButton").addEventListener("click", function(){
+        if(markerPosition === true){
+            return(marker.remove + marker1.remove + marker2.remove)
+        }
+
+
+    });
+
+
+
+
+</script>
+</body>
+</html>
