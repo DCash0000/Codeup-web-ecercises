@@ -5,7 +5,7 @@
         <title>Push-up Day 3</title>
     </head>
     <body>
-    <script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>    <script>
         // function helloName(name){
         //     return "Hello " + name + "!";
         // }
@@ -292,33 +292,59 @@
 
 
         //****************Jan 21 Push-Up*************//
-        let s1 = 'silent';
-        let s2 = 'listen';
-        function isAnagram(s1, s2){
-            if(!s1 || !s2 || s1.length !== s2.length){
-                return false;
+        // let s1 = 'silent';
+        // let s2 = 'listen';
+        // function isAnagram(s1, s2){
+        //     if(!s1 || !s2 || s1.length !== s2.length){
+        //         return false;
+        //     }
+        //     let lS1 = s1.toLowerCase();
+        //     let lS2 = s2.toLowerCase();
+        //     if (lS1 === lS2){
+        //         return false;
+        //     }
+        //     let rS1 = lS1.split('').sort().join('');
+        //     let rS2 = lS2.split('').sort().join('');
+        //     return rS1 === rS2;
+        // }
+        //
+        // let result = isAnagram(s1, s2);
+        // console.log(result);
+        //
+        // //********Daniels Example************//
+        // let hasAnagram = (word1, word2) => {
+        //     letters1 = word1.toLowerCase().split('').sort();
+        //     letters2 = word2.toLowerCase().split('').sort();
+        //     return(letters1.join() == letters2.join());
+        // };
+        // console.log(hasAnagram('dog', 'god'));
+        // console.log(hasAnagram('diarrhea', 'airraid'));
+        let moviesArray = [
+            {
+                title: 'Die Hard',
+                rating: 5,
+            },
+            {
+                title: 'Bad Boys',
+                rating: 5,
+            },
+            {
+                title: 'Gemini Man',
+                rating: 3,
             }
-            let lS1 = s1.toLowerCase();
-            let lS2 = s2.toLowerCase();
-            if (lS1 === lS2){
-                return false;
+        ];
+
+
+
+        for(let i = 0; i < moviesArray.length; i++){
+            if(moviesArray[i].rating >= 5){
+                console.log('Great movies are: ' + moviesArray[i].title )
+            }else if(moviesArray[i].rating < 5){
+                console.log('Movies that need some help: ' + moviesArray[i].title)
             }
-            let rS1 = lS1.split('').sort().join('');
-            let rS2 = lS2.split('').sort().join('');
-            return rS1 === rS2;
         }
 
-        let result = isAnagram(s1, s2);
-        console.log(result);
 
-        //********Daniels Example************//
-        let hasAnagram = (word1, word2) => {
-            letters1 = word1.toLowerCase().split('').sort();
-            letters2 = word2.toLowerCase().split('').sort();
-            return(letters1.join() == letters2.join());
-        };
-        console.log(hasAnagram('dog', 'god'));
-        console.log(hasAnagram('diarrhea', 'airraid'));
 
 
     </script>
