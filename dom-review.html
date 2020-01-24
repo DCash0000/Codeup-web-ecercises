@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Review</title>
+</head>
+<body>
+<div class="container">
+    <div id="main">
+        <input type="text" id="input">
+        <button id="add-to-list">Add to List</button>
+
+        <h4>Favorite Food:</h4>
+        <ul id="favorite-food">
+            <li>Ramen</li>
+            <li>Sushi</li>
+            <li>Curry</li>
+        </ul>
+
+        <h4 ondblclick="chBackColor('purple')" id="change-me">Change Me</h4>
+
+        <h4>My Cohort: <span id="my-cohort"></span></h4>
+        <input type="text" id="cohort-name">
+        <button id="change-cohort">Update</button>
+
+        <br>
+        <button onclick="colorChange('yellow')" id="highlight">Highlight</button>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+    setInterval(function () {
+
+
+    })
+    $("#add-to-list").click(function () {
+        $("#favorite-food").append($('<li>', {text: $('#input').val()}));
+
+    });
+
+    $("#change-cohort").click(function () {
+        $("#my-cohort").append($('<span>', {text: $('#cohort-name').val()}));
+
+    });
+
+    function chBackColor(color) {
+        document.getElementById("change-me").style.background = color;
+
+    }
+    function colorChange(color) {
+        document.getElementById("highlight").style.background = color;
+    }
+
+
+    // $("#highlight").click(function (chCohortColor) {
+    //     document.getElementById("#my-cohort").body.style.background = chCohortColor;
+    //
+    // })
+
+    setInterval(function() {
+        $("body").css("background-color", "pink") }, 3000)
+</script>
+</body>
+</html>
