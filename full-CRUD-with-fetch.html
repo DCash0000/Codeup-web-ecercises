@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+    (function ($) {
+
+
+        //<<-------------Fetching Toys------------->>
+        const fetchToys = () => {
+            fetch('http://localhost:3000/toys')
+                .then(resp => resp.json())
+                .then(renderToys)
+        };
+
+        const toyCollection = document.getElementById('toy-collection')
+        const renderToys = (toys) => {
+            toyCollection.innerHTML = "";
+            toys.forEach(function (toy) {
+                toyCollection.innerHTML += `
+            <div class="card" data-id=${toy.id}>
+            <h2>${toy.name}</h2>
+            <img src="${toy.name}" class="toy-avatar"/>
+            <p>${toy.likes} Likes</p>
+            <button class="like-btn">Like</button>
+            <button class="delete-btn">Delete</button>
+            </div>`
+            })
+        };
+        fetchToys();
+
+
+    })(jQuery);
+
+
+
+
+</script>
+</body>
+</html>
